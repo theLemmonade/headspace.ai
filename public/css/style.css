@@ -17,6 +17,10 @@ body {
 	color: white;
 }
 
+#hero {
+    margin: 300px 0px 30px 0px;
+}
+
 #promptEl {
 	display: flex;
 	background-color: white;
@@ -37,7 +41,6 @@ body {
     margin: -2px;
     color: white;
 }
-
 
 input {
 	outline: none;
