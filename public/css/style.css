@@ -36,10 +36,11 @@ input {
     margin: 0px 0px 15px;
     font-size: 40pt;
     font-family: 'Kanit', sans-serif;
+    font-weight: 800;
 }
 
 /* #heroSpan {
-	background: -webkit-linear-gradient(rgb(255, 174, 0), rgb(215, 115, 0));
+	background: -webkit-linear-gradient(rgb(13, 255, 0), rgb(7, 132, 1));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 } */
