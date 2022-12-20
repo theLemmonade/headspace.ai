@@ -40,14 +40,14 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav">
-						<li class="nav-item">
+					<div class="navbar-nav">
+						<div class="nav-item">
 							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
+						</div>
+						<div class="nav-item">
 							<a class="nav-link" href="#">Gallery</a>
-						</li>
-						<li class="nav-item dropdown">
+						</div>
+						<div class="nav-item dropdown">
 							<a
 								class="nav-link dropdown-toggle"
 								href="#"
@@ -59,10 +59,12 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">Settings</a></li>
-								<li><a class="dropdown-item" href="#">Logout</a></li>
+								<li>
+									<a class="dropdown-item text-danger" href="#">Logout</a>
+								</li>
 							</ul>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
 			</container>
 		</nav>
@@ -74,7 +76,7 @@
 				<input
 					id="prompt"
 					class=""
-					placeholder="acrylic painting of the lo-fi beats girl writing javascript"
+					placeholder="an acrylic painting of the lo-fi beats girl writing javascript"
 				/>
 				<button id="submit" class="">Dream</button>
 			</div>

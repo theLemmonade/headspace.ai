@@ -23,6 +23,10 @@ input {
 	color: white;
 }
 
+.navbar-brand {
+    font-weight: 600;
+}
+
 #heroEl {
 	width: 80%;
 	backdrop-filter: blur(10px);
@@ -40,7 +44,7 @@ input {
 }
 
 /* #heroSpan {
-	background: -webkit-linear-gradient(rgb(13, 255, 0), rgb(7, 132, 1));
+	background: -webkit-linear-gradient(rgb(255, 162, 0), rgb(207, 0, 0));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 } */
@@ -72,4 +76,7 @@ input {
 	padding: 5px 15px;
 	margin: -2px;
 	color: white;
+    font-size: 14pt;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
 }
