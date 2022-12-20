@@ -1,3 +1,82 @@
 body {
-    background-image: url(../assets/bg.jpg);
+	background-color: rgb(36, 14, 27);
+	background-image: url(../assets/bg.png);
+	background-position-x: center;
+	background-repeat: no-repeat;
+	background-size: 2000px;
+	color: white;
+}
+
+input {
+	outline: none;
+	border-style: none;
+}
+
+.navbar {
+	backdrop-filter: blur(15px);
+	color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+.navbar-brand,
+.nav-link {
+	color: white;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+#heroEl {
+	width: 80%;
+	backdrop-filter: blur(10px);
+	margin: auto;
+    margin-top: 20%;
+	padding: 30px;
+    border-radius: 15px;
+}
+
+#hero {
+    margin: 0px 0px 15px;
+    font-size: 40pt;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 800;
+}
+
+/* #heroSpan {
+	background: -webkit-linear-gradient(rgb(255, 162, 0), rgb(207, 0, 0));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */
+
+#promptEl {
+	display: flex;
+	background-color: white;
+	margin: auto;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#prompt {
+	flex-grow: 1;
+	margin-left: 5px;
+}
+
+#submit,
+#submit:focus {
+	flex-shrink: 0;
+	justify-self: end;
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(248, 180, 33),
+		rgb(255, 136, 0)
+	);
+	border-style: none;
+	border-radius: 8px;
+	padding: 5px 15px;
+	margin: -2px;
+	color: white;
+    font-size: 14pt;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
 }
