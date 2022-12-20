@@ -11,6 +11,7 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 		/>
+		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>headspace.ai</title>
 	</head>
@@ -58,15 +59,13 @@
 		</nav>
 		<div class="">
 			<h1 id="hero" class="text-center my-3">dream up anything using AI</h1>
-			<div class="d-flex justify-content-center">
+			<div id="promptEl" class="">
 				<input
 					id="prompt"
-					class="form-control-lg w-75 mx-3"
+					class=""
 					placeholder="acrylic painting of the lo-fi beats girl writing code"
 				/>
-				<button id="submit" class="">
-					<i class="bi bi-arrow-right-circle-fill"></i>
-				</button>
+				<button id="submit" class="">Dream</button>
 			</div>
 		</div>
 		<footer class="fixed-bottom"></footer>

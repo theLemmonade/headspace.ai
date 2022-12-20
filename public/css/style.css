@@ -4,7 +4,7 @@ body {
 	background-position-x: center;
 	background-repeat: no-repeat;
 	background-size: 2000px;
-	color: antiquewhite;
+	color: white;
 }
 
 .navbar {
@@ -17,6 +17,34 @@ body {
 	color: white;
 }
 
-.nav-link.active {
-	display: none;
+#promptEl {
+	display: flex;
+	background-color: white;
+	margin: auto;
+	width: 80%;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#submit,
+#submit:focus {
+	flex-shrink: 0;
+	justify-self: end;
+    background-image: linear-gradient(to right bottom, rgb(248, 180, 33), rgb(255, 136, 0));
+    border-style: none;
+    border-radius: 8px;
+    padding: 5px 15px;
+    margin: -2px;
+    color: white;
+}
+
+
+input {
+	outline: none;
+	border-style: none;
+}
+
+#prompt {
+	flex-grow: 1;
+    margin-left: 5px;
 }
