@@ -11,11 +11,11 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<title>headspace.ai</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg bg-light">
+		<nav class="navbar navbar-expand-lg">
 			<container class="container-fluid">
 				<a class="navbar-brand" href="#">headspace.ai</a>
 				<button
@@ -56,15 +56,20 @@
 				</div>
 			</container>
 		</nav>
-		<h1 id="hero" class="d-flex m-5">create anything</h1>
-		<div class="d-flex align-items-start m-5">
-			<input
-				class="form-control-lg "
-				placeholder="a horse wearing a spacesuit"
-			/>
-			<button class="btn btn-lg btn-warning mx-2">submit</button>
+		<div class="">
+			<h1 id="hero" class="text-center my-3">dream up anything using AI</h1>
+			<div class="d-flex justify-content-center">
+				<input
+					id="prompt"
+					class="form-control-lg w-75 mx-3"
+					placeholder="acrylic painting of the lo-fi beats girl writing code"
+				/>
+				<button id="submit" class="">
+					<i class="bi bi-arrow-right-circle-fill"></i>
+				</button>
+			</div>
 		</div>
-		<footer></footer>
+		<footer class="fixed-bottom"></footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="./assets/js/script.js"></script>
 	</body>

@@ -1,3 +1,22 @@
 body {
-    background-image: url(../assets/bg.jpg);
+	background-color: rgb(36, 14, 27);
+	background-image: url(../assets/bg.png);
+	background-position-x: center;
+	background-repeat: no-repeat;
+	background-size: 2000px;
+	color: antiquewhite;
+}
+
+.navbar {
+	backdrop-filter: blur(15px);
+	color: white;
+}
+
+.navbar-brand,
+.nav-link {
+	color: white;
+}
+
+.nav-link.active {
+	display: none;
 }
