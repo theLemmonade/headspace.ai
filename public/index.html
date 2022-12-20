@@ -3,14 +3,68 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<title>headspace.ai</title>
 	</head>
 	<body>
-        create anything
-        <input>
+		<nav class="navbar navbar-expand-lg bg-light">
+			<container class="container-fluid">
+				<a class="navbar-brand" href="#">headspace.ai</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Gallery</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								Profile
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Settings</a></li>
+								<li><a class="dropdown-item" href="#">Logout</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</container>
+		</nav>
+		<h1 id="hero" class="d-flex m-5">create anything</h1>
+		<div class="d-flex align-items-start m-5">
+			<input
+				class="form-control-lg "
+				placeholder="a horse wearing a spacesuit"
+			/>
+			<button class="btn btn-lg btn-warning mx-2">submit</button>
+		</div>
+		<footer></footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="./assets/js/script.js"></script>
 	</body>
