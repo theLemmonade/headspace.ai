@@ -80,3 +80,16 @@ input {
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
 }
+
+#galleryEl {
+    background-color: rgb(32, 36, 40);
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 100px;
+    border-radius: 5px;
+}
+
+.card {
+margin-bottom: 50px;
+}
