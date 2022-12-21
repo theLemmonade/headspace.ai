@@ -31,6 +31,9 @@ input {
 	width: 80%;
 	backdrop-filter: blur(10px);
 	margin: auto;
+
+
+=======
 	margin-top: 20%;
 	padding: 30px;
 	border-radius: 15px;
@@ -76,6 +79,7 @@ input {
 	padding: 5px 15px;
 	margin: -2px;
 	color: white;
+
 	font-size: 14pt;
 	font-family: "Kanit", sans-serif;
 	font-weight: 400;

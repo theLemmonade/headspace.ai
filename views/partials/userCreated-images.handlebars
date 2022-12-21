@@ -1,0 +1,13 @@
+<!-- This file creates a card for each user created image on the user's gallery page -->
+<section class="card">
+  <a href="/userGallery/{{id}}">
+    <header>{{title}}</header>
+
+    <div class="card-body">
+       <!-- next line will need to be adjusted when image source identified -->
+      <img src="/db/{{filename}}" alt="{{description}}">
+      <p>Created By: {{user}}</p>
+      <p>Date Created: {{timestamp}}</p>
+    </div>
+  </a>
+</section>
