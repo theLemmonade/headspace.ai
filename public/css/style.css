@@ -98,6 +98,6 @@ input {
 }
 
 .card {
-	margin-bottom: 50px;
+	margin:0px;
 	line-height: 2;
 }
