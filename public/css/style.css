@@ -82,11 +82,11 @@ input {
 }
 
 #galleryEl {
-    background-color: rgb(32, 36, 40);
+    background-color: rgb(37, 42, 46);
     width: 95%;
     margin: auto;
     margin-top: 30px;
-    padding: 100px;
+    padding: 50px;
     border-radius: 5px;
 }
 
