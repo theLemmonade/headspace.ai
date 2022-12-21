@@ -1,10 +1,12 @@
+<!--This file will be used IF we create a second user page to enlarge image and add timestamp details -->
 <section class="card">
-  <a href="/painting/{{id}}">
+  <a href="/userGallery/{{id}}">
     <header>{{title}}</header>
 
     <div class="card-body">
-      <img src="/images/{{filename}}" alt="{{description}}">
-      <p>Created By: {{artist}}</p>
+      <!-- next line will need to be adjusted when image source identified -->
+      <img src="/db/{{filename}}" alt="{{description}}">
+      <p>Created By: {{user}}</p>
       <p>Date Created: {{timestamp}}</p>
     </div>
   </a>
