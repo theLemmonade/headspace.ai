@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
+
 class Image extends Model {}
 
 Image.init(
@@ -19,7 +20,7 @@ Image.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		filename: {
+		imgURL: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
