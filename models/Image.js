@@ -21,7 +21,7 @@ Image.init(
 			allowNull: false,
 		},
 		imageURL: {
-			type: DataTypes.STRING,
+			type: DataTypes.TEXT,
 			allowNull: false,
 		},
 		date_created: {
