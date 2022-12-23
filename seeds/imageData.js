@@ -48,8 +48,4 @@ const imageData = [
 ];
 
 const seedImage = () => Image.bulkCreate(imageData);
-<<<<<<< HEAD
-
-=======
->>>>>>> 2c88f1a8db77fecdd5104dc2f815cfacb35f7998
 module.exports = seedImage;

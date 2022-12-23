@@ -11,16 +11,17 @@ router.get('/gallery', (req, res) => {
 //GET request for login
 router.get('/login', (req, res) => {
 //If user is logged in, user will be redirected usergallery page. 
-    if (req.session.logged_in) {
-        res.redirect('/usergallery');
-        return;
-      }
+    // if (req.session.logged_in) {
+    //     res.redirect('/usergallery');
+    //     return;
+    //   }
     res.render('login')});
 //GET request for registry
 router.get('/register', (req, res) => {
     res.render('register')});
 //GET request for user gallery
-router.get('/usergallery',withAuth, async (req, res) => {
+router.get('/usergallery', withAuth,async (req, res) => {
+   
     try {
         const userGalleryData= await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
@@ -31,9 +32,9 @@ router.get('/usergallery',withAuth, async (req, res) => {
     res.render('user-gallery', {
         ...userGallery,
         logged_in: true
-    });}
-    catch(err) {
+    });
+}catch(err) {
         res.status(500).json(err);
-    }
+}
 });
 module.exports = router
