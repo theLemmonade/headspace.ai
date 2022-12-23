@@ -1,6 +1,7 @@
 const sequelize = require('../config/connection');
 const seedImage= require('./imageData');
 const seedUser = require('./userData');
+const seedUserGallery = require('./userGallery');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -8,6 +9,8 @@ const seedAll = async () => {
   await seedImage();
 
   await seedUser();
+
+  await seedUserGallery();
 
   process.exit(0);
 };
