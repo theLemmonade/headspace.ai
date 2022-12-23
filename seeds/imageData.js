@@ -43,6 +43,6 @@ const imageData = [
 	},
 ];
 
-const seedPaintings = () => Painting.bulkCreate(paintingdata);
+const seedImage = () => Image.bulkCreate(imageData);
 
-module.exports = seedPaintings;
+module.exports = seedImage;

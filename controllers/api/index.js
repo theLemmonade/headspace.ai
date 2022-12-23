@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const userGalleryRoutes = require('./userGalleryRoutes');
 
 router.use('/users', userRoutes);
-router.use('/gallery', userGalleryRoutes);
+router.use('/usergallery', userGalleryRoutes);
 
 module.exports = router; 
