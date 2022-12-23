@@ -9,10 +9,11 @@ const resultDate = document.querySelector("#resultDate");
 const resultShareIcon = document.querySelector("#resultShareIcon");
 const resultModal = new bootstrap.Modal(
 	document.getElementById("resultModal"),
-	{
-		keyboard: false,
-	}
+	{ keyboard: false }
 );
+const errModal = new bootstrap.Modal(document.getElementById("errModal"), {
+	keyboard: false,
+});
 let imageURL = String;
 let promptValue = String;
 let isPrivate = Boolean;
@@ -58,7 +59,6 @@ async function generateImageRequest() {
 			document
 				.querySelector("#spinner")
 				.setAttribute("class", "spinner-border text-warning d-none");
-			beginErrModal();
 			throw new Error("That image could not be generated");
 		}
 		const data = await response.json();
@@ -102,16 +102,18 @@ function publishBtn() {
 }
 
 // TODO Create error pop-up mini modal
-function beginErrModal() {
+function beginErrModal(error) {
 	console.log("beginErrModal go");
+	document.querySelector("#errModalSpan").textContent = error;
+	errModal.show();
 }
 
 // TODO Send imageURL to SQL db
 function todb() {
 	console.log("todb go");
-    if (!isPrivate) {
-        console.log("adding to public gallery")
-    } 
+	if (!isPrivate) {
+		console.log("adding to public gallery");
+	}
 }
 
 // Listens for submit event

@@ -101,7 +101,7 @@ input {
 	font-weight: 400;
 }
 
-#resultModal {
+#resultModal, #errModal {
 	color: black;
 }
 

@@ -90,6 +90,39 @@
 				<button id="submit">Dream</button>
 			</div>
 		</div>
+		<!-- err modal-->
+		<div id="errModal" class="modal fade" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title"><span id="errModalSpan"></span></h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<p>There's been an error with <b>headspace.ai</b>'s third party API.</p>
+						<p>This could have been a cause by a bug within our codebase, or more likely, because our OpenAI token budget has been depleted. <b>headspace.ai</b> is a student project built to showcase our progress for UConn's full-stack coding bootcamp. You can <a href="https://github.com/theLemmonade/project-headspace.ai" target="blank">learn more and support our work here</a>.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button style="justify-self: left" class="btn btn-outine-secondary">
+							<i class="bi bi-flag"></i> <u>Report</u>
+						</button>
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- result modal -->
 		<div
 			id="resultModal"
