@@ -12,15 +12,15 @@ Image.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		title: {
+		prompt: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		artist: {
+		username: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		imgURL: {
+		imageURL: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},

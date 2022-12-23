@@ -11,10 +11,10 @@ router.get('/gallery', (req, res) => {
 //GET request for login
 router.get('/login', (req, res) => {
 //If user is logged in, user will be redirected usergallery page. 
-    // if (req.session.logged_in) {
-    //     res.redirect('/usergallery');
-    //     return;
-    //   }
+    if (req.session.logged_in) {
+        res.redirect('/usergallery');
+        return;
+      }
     res.render('login')});
 //GET request for registry
 router.get('/register', (req, res) => {
