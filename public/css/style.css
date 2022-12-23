@@ -19,6 +19,10 @@ input {
 	font-family: "Kanit", sans-serif;
 }
 
+.nav-link.active {
+	color: yellow;
+}
+
 .navbar-brand,
 .nav-link {
 	color: white;
@@ -89,6 +93,7 @@ color:black
 
 #resultImg {
 	max-width: max-content;
+	margin-top: 10px;
 }
 
 #loginEl {

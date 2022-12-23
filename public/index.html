@@ -90,7 +90,7 @@
 			data-bs-toggle="modal"
 			data-bs-target="#resultModal"
 		>
-			Launch demo modal
+			this button will be gone when our project is complete
 		</button>
 
 		<!-- Modal -->
@@ -103,11 +103,6 @@
 		>
 			<div class="modal-dialog modal-xl modal-dialog-centered">
 				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title fs-5 mx-auto" id="resultModalLabel">
-							<b>headspace.ai</b>
-						</h1>
-					</div>
 					<div class="modal-body">
 						<div class="container-fluid d-flex">
 							<div class="row">
@@ -133,20 +128,24 @@
 							class="btn btn-secondary"
 							data-bs-dismiss="modal"
 						>
-							Try Again
+							<i class="bi bi-arrow-repeat"></i>
+							 Try Again
 						</button>
 						<input
-							id="resultPublish"
+							id="resultShare"
 							type="checkbox"
 							class="btn-check"
 							id="privacy"
 							autocomplete="off"
 						/>
-						<label class="btn btn-outline-info mx-3" for="resultPublish"
-							>Publish on <b>headspace.ai</b></label
-						><br />
+						<label class="btn btn-outline-info mx-3" for="resultShare"
+							><i id="resultShareIcon" class="bi bi-lock"
+								><!-- <i class="bi bi-unlock-fill"></i> --></i
+							>
+							 Share on<b> headspace.ai</b></label
+						>
 						<button id="resultSave" type="button" class="btn btn-warning">
-							Save to Gallery
+							 Save to Gallery
 						</button>
 					</div>
 				</div>
