@@ -69,6 +69,7 @@
 				</div>
 			</container>
 		</nav>
+		<!-- prompt container -->
 		<div id="heroEl" class="">
 			<h1 id="hero" class="text-center">
 				dream up anything with <span id="heroSpan">headspace.ai</span>
@@ -79,14 +80,21 @@
 					class=""
 					placeholder="an acrylic painting of the lo-fi beats girl writing javascript"
 				/>
-				<div class="spinner-border text-warning" role="status">
+<!-- 				<div class="spinner-border text-warning" role="status">
 					<span class="visually-hidden">Loading...</span>
-				</div>
-				<button id="submit" class="">Dream</button>
+				</div> -->
+				<button
+					id="submit"
+					type="button"
+					data-bs-toggle="modal"
+					data-bs-target="#resultModal"
+				>
+					Dream
+				</button>
 			</div>
 		</div>
 
-		<!-- Button trigger modal -->
+		<!-- Button trigger moda
 		<button
 			type="button"
 			class="btn btn-primary"
@@ -94,9 +102,9 @@
 			data-bs-target="#resultModal"
 		>
 			this button will be gone when our project is complete
-		</button>
+		</button> -->
 
-		<!-- Modal -->
+		<!-- result modal -->
 		<div
 			id="resultModal"
 			class="modal fade"
