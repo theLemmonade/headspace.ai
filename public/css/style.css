@@ -29,8 +29,8 @@ input {
 	font-family: "Kanit", sans-serif;
 }
 
-.nav-link.active {
-	color: yellow;
+.nav-link.active, .nav-link.hover, .nav-link.focus {
+	color: rgb(255, 208, 0) !important;
 }
 
 .navbar-brand,
