@@ -4,6 +4,7 @@ body {
 	background-position-x: center;
 	background-repeat: no-repeat;
 	background-size: 2000px;
+	font-family: "Kanit", sans-serif;
 	color: white;
 }
 
@@ -15,7 +16,7 @@ input {
 .navbar {
 	backdrop-filter: blur(15px);
 	color: white;
-    font-family: 'Kanit', sans-serif;
+	font-family: "Kanit", sans-serif;
 }
 
 .navbar-brand,
@@ -24,23 +25,26 @@ input {
 }
 
 .navbar-brand {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 #heroEl {
 	width: 80%;
 	backdrop-filter: blur(10px);
 	margin: auto;
-    margin-top: 20%;
+
+
+=======
+	margin-top: 20%;
 	padding: 30px;
-    border-radius: 15px;
+	border-radius: 15px;
 }
 
 #hero {
-    margin: 0px 0px 15px;
-    font-size: 40pt;
-    font-family: 'Kanit', sans-serif;
-    font-weight: 800;
+	margin: 0px 0px 15px;
+	font-size: 40pt;
+	font-family: "Kanit", sans-serif;
+	font-weight: 800;
 }
 
 /* #heroSpan {
@@ -76,20 +80,29 @@ input {
 	padding: 5px 15px;
 	margin: -2px;
 	color: white;
-    font-size: 14pt;
-    font-family: 'Kanit', sans-serif;
-    font-weight: 400;
+
+	font-size: 14pt;
+	font-family: "Kanit", sans-serif;
+	font-weight: 400;
+}
+
+#loginEl {
+	width: 500px;
+	margin: auto;
+	margin-top: 100px;
+	color: black;
 }
 
 #galleryEl {
-    background-color: rgb(32, 36, 40);
-    width: 95%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 100px;
-    border-radius: 5px;
+	background-color: rgb(37, 42, 46);
+	width: 95%;
+	margin: auto;
+	margin-top: 30px;
+	padding: 50px;
+	border-radius: 5px;
 }
 
 .card {
-margin-bottom: 50px;
+	margin:0px;
+	line-height: 2;
 }
