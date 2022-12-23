@@ -1,9 +1,19 @@
+.header-container,
+.body-container,
+.footer-container {
+	max-width: 2000px;
+	margin: 0 auto;
+}
+
 body {
 	background-color: rgb(36, 14, 27);
 	background-image: url(../assets/bg.png);
 	background-position-x: center;
 	background-repeat: no-repeat;
 	background-size: 2000px;
+	max-width: 2000px;
+	margin: 0 auto !important;
+	float: none !important;
 	font-family: "Kanit", sans-serif;
 	color: white;
 }
@@ -88,12 +98,12 @@ input {
 }
 
 #resultModal {
-color:black
+	color: black;
 }
 
 #resultImg {
 	max-width: max-content;
-	margin-top: 10px;
+	margin: 10px 0px;
 }
 
 #loginEl {
@@ -113,6 +123,6 @@ color:black
 }
 
 .card {
-	margin:0px;
+	margin: 0px;
 	line-height: 2;
 }
