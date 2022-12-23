@@ -109,8 +109,12 @@ function beginErrModal() {
 // TODO Send imageURL to SQL db
 function todb() {
 	console.log("todb go");
+    if (!isPrivate) {
+        console.log("adding to public gallery")
+    } 
 }
 
 // Listens for submit event
 document.querySelector("#submit").addEventListener("click", onSubmit);
 document.querySelector("#resultShare").addEventListener("click", publishBtn);
+document.querySelector("#resultSave").addEventListener("click", todb);
