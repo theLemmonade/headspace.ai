@@ -83,15 +83,11 @@ input {
 	font-weight: 400;
 }
 
-#resultEl {
-	margin: 5%;
-	width: auto;
-	color: black;
+#resultModal {
+color:black
 }
 
 #resultImg {
-	margin: 25px 15px;
-	border-radius: 8px;
 	max-width: max-content;
 }
 
