@@ -59,9 +59,8 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">Settings</a></li>
-								<li>
-									<a class="dropdown-item text-danger" href="#">Logout</a>
-								</li>
+								<li><a class="dropdown-item" href="#">History</a></li>
+								<li><a class="dropdown-item text-danger" href="#">Logout</a></li>
 							</ul>
 						</div>
 					</div>
@@ -81,6 +80,50 @@
 				<button id="submit" class="">Dream</button>
 			</div>
 		</div>
+
+
+
+		<div id="resultEl" class="card container-fluid d-flex">
+			<div class="row">
+				<img id="resultImg" src="./assets/1024x1024.png" alt="" class="col-lg-7 col-sm-5">
+				<div id="resultAside" class="col-lg-4 col-sm-5">
+					<input type="checkbox" class="btn-check" id="privacy" autocomplete="off">
+					<label class="btn btn-outline-primary btn-lg" for="privacy">Publish</label><br>
+					<button class="btn btn-lg btn-warning">Save</button>
+					<h2 id="resultPrompt">Prompt goes here</h2>
+					<h4>by</h4>
+					<h3>Username goes here</h3>
+				</div>
+			</div>
+		</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resultModal">
+	Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-xl modal-dialog-centered">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="resultModalLabel">Modal title</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+		  ...
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Save changes</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+
+
 		<footer class="fixed-bottom"></footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="./assets/js/script.js"></script>
