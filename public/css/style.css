@@ -72,7 +72,7 @@ input {
 	border-radius: 10px;
 }
 
-#prompt {
+#promptInput {
 	flex-grow: 1;
 	margin-left: 5px;
 }
@@ -101,7 +101,7 @@ input {
 	font-weight: 400;
 }
 
-#resultModal {
+#resultModal, #errModal {
 	color: black;
 }
 

@@ -42,10 +42,14 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<div class="navbar-nav">
 						<div class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
+							<a class="nav-link active" aria-current="page" href="#"
+								><i class="bi bi-brush-fill"></i> Create</a
+							>
 						</div>
 						<div class="nav-item">
-							<a class="nav-link" href="#">Gallery</a>
+							<a class="nav-link" href="#"
+								><i class="bi bi-grid-fill"></i> Gallery</a
+							>
 						</div>
 						<div class="nav-item dropdown">
 							<a
@@ -55,7 +59,7 @@
 								data-bs-toggle="dropdown"
 								aria-expanded="false"
 							>
-								Profile
+								<i class="bi bi-person-circle"></i> Profile
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">Settings</a></li>
@@ -76,34 +80,69 @@
 			</h1>
 			<div id="promptEl" class="">
 				<input
-					id="prompt"
+					id="promptInput"
 					class=""
 					placeholder="an acrylic painting of the lo-fi beats girl writing javascript"
 				/>
-<!-- 				<div class="spinner-border text-warning" role="status">
+				<div id="spinner" class="spinner-border text-warning" role="status">
 					<span class="visually-hidden">Loading...</span>
-				</div> -->
-				<button
-					id="submit"
-					type="button"
-					data-bs-toggle="modal"
-					data-bs-target="#resultModal"
-				>
-					Dream
-				</button>
+				</div>
+				<button id="submit">Dream</button>
 			</div>
 		</div>
-
-		<!-- Button trigger moda
-		<button
-			type="button"
-			class="btn btn-primary"
-			data-bs-toggle="modal"
-			data-bs-target="#resultModal"
-		>
-			this button will be gone when our project is complete
-		</button> -->
-
+		<!-- err modal-->
+		<div id="errModal" class="modal fade" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title"><span id="errModalSpan"></span></h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<p>
+							There's been an error with the <b>headspace.ai</b> third party
+							API.
+						</p>
+						<p>
+							This is probably because our limited
+							<a href="https://beta.openai.com/docs/introduction" target="blank"
+								>token budget has been depleted.</a
+							>
+							<p></p>
+							<b>headspace.ai</b> is a student project built to showcase our
+							progress for UConn's full-stack coding bootcamp. You can
+							<a
+								href="https://github.com/theLemmonade/project-headspace.ai"
+								target="blank"
+								>learn more and support our work here</a
+							>.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<a
+							href="mailto:headspace.ai+error@gmail.com"
+							target="blank"
+							style="justify-self: left"
+							class="btn btn-outine-secondary"
+						>
+							<i class="bi bi-flag"></i> <u>Report</u>
+						</a>
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- result modal -->
 		<div
 			id="resultModal"
@@ -126,20 +165,22 @@
 								<div id="resultAside" class="col-lg-4 col-sm-12 my-auto">
 									<h2>"<span id="resultPrompt">Prompt goes here</span>"</h2>
 									<p>by</p>
-									<h4>Username goes here</h4>
-									<p>Dec 21st, 2022</p>
+									<h4 id="resultUser">Username goes here</h4>
+									<p id="resultDate">Dec 21st, 2022</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<div>
-							<button
+							<a
+								href="mailto:headspace.ai+content@gmail.com"
+								target="blank"
 								style="justify-self: left"
 								class="btn btn-outine-secondary"
 							>
 								<i class="bi bi-flag"></i> <u>Report</u>
-							</button>
+							</a>
 						</div>
 						<button
 							id="resultDismiss"
@@ -173,6 +214,6 @@
 
 		<footer class="fixed-bottom"></footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="./assets/js/script.js"></script>
+		<script src="./js/index.js"></script>
 	</body>
 </html>
