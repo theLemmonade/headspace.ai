@@ -23,10 +23,10 @@ isPrivate = true;
 function onSubmit(event) {
 	event.preventDefault();
 	console.log("onSubmit go");
-	promptValue = promptInput.value;
+    promptValue = promptInput.value;
 	console.log(promptValue);
 	// If nothing is added then an alert pops up
-	if (promptValue === " ") {
+	if (promptValue === "") {
 		document
 			.querySelector("#promptInput")
 			.setAttribute(
@@ -36,24 +36,27 @@ function onSubmit(event) {
 		return;
 	}
 	generateImageRequest(promptValue);
-}
+};
 
 // generateImageRequest function
-async function generateImageRequest() {
+async function generateImageRequest(promptValue) {
 	console.log("generateImageRequest go");
-	try {
+    console.log(promptValue);
+
+    try {
 		document
 			.querySelector("#spinner")
 			.setAttribute("class", "spinner-border text-warning");
-		const response = await fetch("/api/generateImage", {
-			method: "Post",
-			headers: {
-				"Content-Type": "application.json",
-			},
-			body: JSON.stringify({
-				promptValue,
-			}),
-		});
+
+	const response = await fetch("/api/generateimage", {
+        method: "POST",
+        body: JSON.stringify({
+            promptValue,
+        }),
+        headers: {
+            "Content-Type": "application.json",
+        }
+    });
 
 		if (!response.ok) {
 			document
@@ -61,7 +64,8 @@ async function generateImageRequest() {
 				.setAttribute("class", "spinner-border text-warning d-none");
 			throw new Error("405, that image could not be generated");
 		}
-		const data = await response.json();
+		const data = await response.JSON();
+        console.log(data);
 		imageURL = data.data;
 		document.querySelector("#resultImg").src = imageURL;
 		todb();
