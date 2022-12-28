@@ -1,22 +1,17 @@
-document
-	.querySelector("#spinner")
-	.setAttribute("class", "spinner-border text-warning d-none");
+document.querySelector("#spinner").setAttribute("class", "spinner-border text-warning d-none");
+console.log("hiding spinner")
 const promptInput = document.querySelector("#promptInput");
 const resultImg = document.querySelector("#resultImg");
 const resultPrompt = document.querySelector("#resultPrompt");
 const resultUser = document.querySelector("#resultUser");
 const resultDate = document.querySelector("#resultDate");
 const resultShareIcon = document.querySelector("#resultShareIcon");
-const resultModal = new bootstrap.Modal(
-	document.querySelector("#resultModal"),
-	{ keyboard: false }
-);
-const errModal = new bootstrap.Modal(document.querySelector("#errModal"), {
-	keyboard: false,
-});
+const resultModal = new bootstrap.Modal(document.querySelector("#resultModal"), {keyboard: false,});
+const errModal = new bootstrap.Modal(document.querySelector("#errModal"), {keyboard: false,});
 let imageURL = String;
 let promptValue = String;
 let isPrivate = Boolean;
+// default value for imageURL let is placeholder img
 imageURL = "./assets/1024x1024.png";
 isPrivate = true;
 
@@ -45,6 +40,7 @@ async function generateImageRequest() {
 		document
 			.querySelector("#spinner")
 			.setAttribute("class", "spinner-border text-warning");
+			console.log("showing spinner")
 		const response = await fetch("/api/generateImage", {
 			method: "Post",
 			headers: {
@@ -59,6 +55,7 @@ async function generateImageRequest() {
 			document
 				.querySelector("#spinner")
 				.setAttribute("class", "spinner-border text-warning d-none");
+				console.log("hiding spinner")
 			throw new Error("405, that image could not be generated");
 		}
 		const data = await response.json();
@@ -72,24 +69,29 @@ async function generateImageRequest() {
 	}
 }
 
-// Config Modal
+// config Modal
 function configModal() {
 	console.log("configModal go");
+	// set modal content from API response and session data
 	resultImg.setAttribute("src", imageURL);
 	resultPrompt.textContent = promptValue;
-	resultUser.textContent = "current user, TODO: get from session data";
+	// TODO get session data and store under 'resultUser'
+	resultUser.textContent = "current user";
+	// TODO get current date and store under 'resultDate'
 	resultDate.textContent = "current date";
 }
 
-// Launch Modal
+// launch Modal
 function beginModal() {
 	console.log("beginModal go");
 	resultModal.show();
 	document
 		.querySelector("#spinner")
 		.setAttribute("class", "spinner-border text-warning d-none");
+		console.log("hiding spinner")
 }
 
+// toggle isPrivate
 function publishBtn() {
 	if (isPrivate) {
 		isPrivate = false;
@@ -98,10 +100,10 @@ function publishBtn() {
 		isPrivate = true;
 		resultShareIcon.setAttribute("class", "bi bi-lock");
 	}
-	console.log("isPrivate is set to " + isPrivate);
+	console.log("publish btn toggled, isPrivate = " + isPrivate);
 }
 
-// TODO Create error pop-up mini modal
+// display error modal
 function beginErrModal(error) {
 	console.log("beginErrModal go");
 	document.querySelector("#errModalSpan").textContent = error;
@@ -113,11 +115,13 @@ function todb() {
 	console.log("todb go");
 	if (!isPrivate) {
 		console.log("adding to public gallery");
+	} else {
+		console.log("adding to private gallery")
 	}
 }
 
-// For dev work on Modal, you can uncomment the line below
-resultModal.show();
+// For dev work on resultModal, you can uncomment the line below
+//resultModal.show();
 
 // Listens for submit event
 document.querySelector("#submit").addEventListener("click", onSubmit);
