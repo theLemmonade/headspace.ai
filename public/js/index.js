@@ -117,7 +117,7 @@ function todb() {
 }
 
 // For dev work on Modal, you can uncomment the line below
-//resultModal.show();
+resultModal.show();
 
 // Listens for submit event
 document.querySelector("#submit").addEventListener("click", onSubmit);
