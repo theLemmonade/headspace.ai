@@ -28,3 +28,22 @@ Submitted for evaluation.
 <li>Run the start command "npm start"
 <li>Open http://localhost:3001
 </ul>
+
+# Usage
+Users can enter a prompt and the api will generate an AI image based on the users text input.
+Users can choose to save the generated image to a personal gallery page.
+
+# User Story
+<ul>
+<li>As a user I want to try an AI image generator and choose to save my created images to my personal gallery.
+<li>WHEN I open the website I will be able to enter a text prompt to create an AI generated image.
+<li>THEN I will be able to choose whether to save the image.
+<li>WHEN I choose to save an image
+<li>THEN I will be prompted to login to my account or creat a new account
+<li>WHEN I create a user account or login to my existing account
+<li>THEN I will be able to save my created images to my personal gallery
+<li>WHEN I click into the Gallery tab 
+<li>THEN I will see AI images from other users as examples of AI images
+<li>WHEN I click the logout button 
+<li>THEN I will be redirected to the homepage
+</ul>
