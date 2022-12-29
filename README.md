@@ -1,17 +1,24 @@
-# headspace.ai  Team 3 Group Project #2
+# headspace.ai  
 A website for users to generate AI images and save tham to a personal gallery.
-
+<br>
+<br>
 # Project Status
 Submitted for evaluation.
-
+<br>
+<br>
 # Project Deployed
+<br>
+<br>
 
 # Screenshots of Webpage
 <img src="" alt="Website Screenshot1">
 <img src="" alt="Website Screenshot2">
 <img src="" alt="Website Screenshot3">
+<br>
+<br>
+<br>
 
-## Table of Contents
+# Table of Contents
 
   * [Technologies Used](#technologies-used)
 
@@ -26,13 +33,16 @@ Submitted for evaluation.
   * [Contributors](#contributors)
 
   * [Acknowledgements](#acknowledgements)
+<br>
+<br>
 
 # Technologies Used
 <ul>
 <li>Used HTML, JavaScript, CSS, SQL, Node, Handlebars to build website.
 <li>Used OpenAI API to capture and render ai generated images per user input. https://https://openai.com/api/ 
 </ul>
-
+<br>
+<br>
 
 # Installation
 <ul>
@@ -44,10 +54,14 @@ Submitted for evaluation.
 <li>Run the start command "npm start"
 <li>Open http://localhost:3001
 </ul>
+<br>
+<br>
 
 # Usage
 Users can enter a prompt and the api will generate an AI image based on the users text input.
 Users can choose to save the generated image to a personal gallery page.
+<br>
+<br>
 
 # User Story
 <ul>
@@ -63,6 +77,8 @@ Users can choose to save the generated image to a personal gallery page.
 <li>WHEN I click the logout button 
 <li>THEN I will be redirected to the homepage
 </ul>
+<br>
+<br>
 
 # Roadmap
 This is a responsive, interactive website using many technologies to generate an AI image based on user input, including a save feature to store a user's created images. Future developments could include:
@@ -72,6 +88,8 @@ This is a responsive, interactive website using many technologies to generate an
 <li>Add a download button for the user to save an image to thair local storage
 <li>Add a social forum page for users to share their created images and comment on other users shared images.
 </ul>
+<br>
+<br>
 
 # Contributors
 <ul>
@@ -80,5 +98,7 @@ This is a responsive, interactive website using many technologies to generate an
 <li>Alexander Frankhouser
 <li>Chris Lemmon
 </ul>
+<br>
+<br>
 
 # Acknowledgements
