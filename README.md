@@ -47,3 +47,22 @@ Users can choose to save the generated image to a personal gallery page.
 <li>WHEN I click the logout button 
 <li>THEN I will be redirected to the homepage
 </ul>
+
+# Roadmap
+This is a responsive, interactive website using many technologies to generate an AI image based on user input, including a save feature to store a user's created images. Future developments could include:
+<ul>
+<li>Add options for the image created, including size options, ....
+<li>Add a share button for the user to easily share an image through social media or text, or copy a link to the image which would be shareable
+<li>Add a download button for the user to save an image to thair local storage
+<li>Add a social forum page for users to share their created images and comment on other users shared images.
+</ul>
+
+# Contributors
+<ul>
+<li>Kevin Bell
+<li>Emily Bernard
+<li>Alexander Frankhouser
+<li>Chris Lemmon
+</ul>
+
+# Acknowledgements
