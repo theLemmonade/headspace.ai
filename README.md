@@ -11,4 +11,9 @@ Submitted for evaluation.
 <img src="" alt="Website Screenshot2">
 <img src="" alt="Website Screenshot3">
 
+# Technologies Used
+<ul>
+<li>Used HTML, JavaScript, CSS, SQL, Node, Handlebars to build website.
+<li>Used OpenAI API to capture and render ai generated images per user input. https://https://openai.com/api/ 
+</ul>
 
