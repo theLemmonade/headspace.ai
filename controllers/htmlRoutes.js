@@ -7,6 +7,9 @@ router.get('/', (req, res) => {
     res.render('homepage')});
 //GET request for gallery
 router.get('/gallery', (req, res) => {
+
+
+    /// get the db data that gallery is going to use 
     res.render('gallery')});
 //GET request for login
 router.get('/login', (req, res) => {
