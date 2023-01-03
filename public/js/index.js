@@ -75,6 +75,7 @@ async function generateImageRequest() {
   } catch (error) {
     beginErrModal(error);
   }
+
 }
 
 // config Modal
