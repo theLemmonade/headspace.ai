@@ -27,6 +27,7 @@ input {
 	backdrop-filter: blur(15px);
 	color: white;
 	font-family: "Kanit", sans-serif;
+	border: 2px solid rgba(0, 0, 0, 0.095);
 }
 
 .nav-link.active, .nav-link.hover, .nav-link.focus {
@@ -49,20 +50,19 @@ input {
 	margin-top: 20%;
 	padding: 30px;
 	border-radius: 15px;
+	border: 2px solid rgba(0, 0, 0, 0.095);
 }
 
 #hero {
 	margin: 0px 0px 15px;
 	font-size: 40pt;
 	font-family: "Kanit", sans-serif;
-	font-weight: 800;
+	font-weight: 400;
 }
 
-/* #heroSpan {
-	background: -webkit-linear-gradient(rgb(158, 145, 0), rgb(104, 207, 0));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-} */
+#heroSpan {
+	font-weight: 700;
+}
 
 #promptEl {
 	display: flex;

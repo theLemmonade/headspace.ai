@@ -28,6 +28,9 @@ const generateImage = async (req, res) => {
             success: true,
             data: imageURL
         })
+
+        // res.render("image", { data: imageURL });
+
     } catch (error) {
         if(error.response) {
             console.log(error.response.status);
