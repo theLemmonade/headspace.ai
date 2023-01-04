@@ -10,7 +10,7 @@ const seedAll = async () => {
 
   await seedUser();
 
-  await seedUserGallery();
+  // await seedUserGallery();
 
   process.exit(0);
 };

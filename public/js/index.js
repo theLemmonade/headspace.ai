@@ -1,6 +1,6 @@
-document
-  .querySelector("#spinner")
-  .setAttribute("class", "spinner-border text-warning d-none");
+// document
+//   .querySelector("#spinner")
+  // .setAttribute("class", "spinner-border text-warning d-none");
 console.log("hiding spinner");
 const promptInput = document.querySelector("#promptInput");
 const resultImg = document.querySelector("#resultImg");

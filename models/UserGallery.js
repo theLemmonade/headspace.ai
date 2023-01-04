@@ -10,11 +10,11 @@ UserGallery.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    prompt: {
       type: DataTypes.STRING,
     },
     date_created: {
