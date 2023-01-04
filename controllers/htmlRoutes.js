@@ -1,15 +1,29 @@
 const router = require("express").Router();
 const { Image, User, UserGallery } = require("../models");
 const withAuth = require("../utils/auth");
+
 //GET request for homepage.
 router.get("/", (req, res) => {
   res.render("homepage");
 });
+
 //GET request for gallery
-router.get("/gallery", (req, res) => {
-  /// get the db data that gallery is going to use
-  res.render("gallery");
+router.get("/gallery", async (req, res) => {
+    const imageData = await Image.findAll({
+      // include: [{
+
+      //   attributes: ['user_name', 'prompt', 'imageURL', 'date_created']
+      // }],
+        attributes: {exclude: ['isPrivate']},
+        order: [[ 'date_created', 'ASC']],
+    }).catch((err) => {
+        res.json(err);
+    });
+    const images = imageData.map((images) => images.get({ plain: true }));
+  res.render("gallery", { images });
+  console.log(images);
 });
+
 //GET request for login
 router.get("/login", (req, res) => {
   //If user is logged in, user will be redirected usergallery page.

@@ -15,7 +15,7 @@ User.init(
         primaryKey: true,
         autoIncrement: true,
       },
-      name: {
+      user_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },

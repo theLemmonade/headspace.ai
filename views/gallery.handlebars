@@ -1,3 +1,4 @@
+
 <section id="galleryEl" class="container-fluid d-flex">
 	<div class="row">
 		<h1
@@ -5,6 +6,12 @@
 		>
 			Feed
 		</h1>
-		{{image}}
+		{{#each images}}
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<img id="galleryImg" src="{{imageURL}}" alt="{{prompt}}" class="card-img-top mt-3" />
+				<div class="card-body">{{user_name}}</div>
+				<div class="card-footer">{{date_created}}</div>
+			</div>
+		{{/each}}
 	</div>
 </section>
