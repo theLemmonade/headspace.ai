@@ -1,13 +1,139 @@
-	<div id="heroEl" class="">
-			<h1 id="hero" class="text-center">
-				dream up anything with <span id="heroSpan">headspace.ai</span>
-			</h1>
-			<div id="promptEl" class="">
-				<input
-					id="prompt"
-					class=""
-					placeholder="an acrylic painting of the lo-fi beats girl writing javascript"
-				/>
-				<button id="submit" class="">Dream</button>
+<!-- prompt container -->
+<div id="heroEl" class="">
+	<h1 id="hero" class="text-center">
+		dream up anything with
+		<span id="heroSpan">headspace.ai</span>
+	</h1>
+	<div id="promptEl" class="">
+		<input
+			id="promptInput"
+			class=""
+			placeholder="an acrylic painting of the lo-fi beats girl writing javascript"
+		/>
+		<div id="spinner" class="spinner-border text-warning" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<button id="submit">Dream</button>
+	</div>
+</div>
+<!-- err modal-->
+<div id="errModal" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"><span id="errModalSpan"></span></h5>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="modal-body">
+				<p>
+					There's been an error with the
+					<b>headspace.ai</b>
+					third party API.
+				</p>
+				<p>
+					This is probably because our limited
+					<a
+						href="https://beta.openai.com/docs/introduction"
+						target="blank"
+					>token budget has been depleted.</a>
+				</p>
+
+				<p></p>
+				<b>headspace.ai</b>
+				is a student project built to showcase our progress for UConn's
+				full-stack coding bootcamp. You can
+				<a
+					href="https://github.com/theLemmonade/project-headspace.ai"
+					target="blank"
+				>learn more and support our work here</a>.
+			</div>
+			<div class="modal-footer">
+				<a
+					href="mailto:headspace.ai+error@gmail.com"
+					target="blank"
+					style="justify-self: left"
+					class="btn btn-outine-secondary"
+				>
+					<i class="bi bi-flag"></i>
+					<u>Report</u>
+				</a>
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+					Close
+				</button>
 			</div>
 		</div>
+	</div>
+</div>
+<!-- result modal -->
+<div
+	id="resultModal"
+	class="modal fade"
+	tabindex="-1"
+	aria-labelledby="resultModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-xl modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="container-fluid d-flex">
+					<div class="row">
+						<img
+							id="resultImg"
+							src="./assets/1024x1024.png"
+							alt=""
+							class="col-lg-7 col-sm-12"
+						/>
+						<div id="resultAside" class="col-lg-4 col-sm-12 my-auto">
+							<h2>"<span id="resultPrompt">Prompt goes here</span>"</h2>
+							<p>by</p>
+							<h4 id="resultUser">Username goes here</h4>
+							<p id="resultDate">Dec 21st, 2022</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div>
+					<a
+						href="mailto:headspace.ai+content@gmail.com"
+						target="blank"
+						style="justify-self: left"
+						class="btn btn-outine-secondary"
+					>
+						<i class="bi bi-flag"></i>
+						<u>Report</u>
+					</a>
+				</div>
+				<button
+					id="resultDismiss"
+					type="button"
+					class="btn btn-secondary"
+					data-bs-dismiss="modal"
+				>
+					<i class="bi bi-arrow-repeat"></i>
+					Try Again
+				</button>
+				<input
+					id="resultShare"
+					type="checkbox"
+					class="btn-check"
+					id="privacy"
+					autocomplete="off"
+				/>
+				<label class="btn btn-outline-info" for="resultShare"><i
+						id="resultShareIcon"
+						class="bi bi-lock"
+					><!-- <i class="bi bi-unlock-fill"></i> --></i>
+					Share on<b> headspace.ai</b></label>
+				<button id="resultSave" type="button" class="btn btn-warning">
+					Save to Gallery
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
