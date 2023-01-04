@@ -118,9 +118,9 @@ function beginErrModal(error) {
 function todb() {
   console.log("todb go");
   if (!isPrivate) {
-    console.log("adding to public gallery");
+    console.log("adding to gallery");
   } else {
-    console.log("adding to private gallery");
+    console.log("adding to Usergallery");
   }
 }
 
