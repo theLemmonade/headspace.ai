@@ -12,11 +12,11 @@ UserGallery.belongsTo(User, {
 });
 
 UserGallery.hasMany(Image, {
-    foreignKey: 'usergallery_id',
+    foreignKey: 'gallery_id',
     onDelete: 'CASCADE'
 });
 Image.belongsTo(UserGallery, {
-    foreignKey: 'usergallery_id'
+    foreignKey: 'gallery_id'
 });
 
 

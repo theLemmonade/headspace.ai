@@ -38,7 +38,7 @@ Image.init(
 			type: DataTypes.INTEGER,
 			references: {
 				model: "usergallery",
-				key: "id",
+				key: "user_id",
 			},
 		},
 	},
