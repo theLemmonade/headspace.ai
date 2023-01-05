@@ -38,7 +38,7 @@ router.get("/register", (req, res) => {
   res.render("register");
 });
 //GET request for user gallery
-router.get("/usergallery/:id", withAuth, async (req, res) => {
+router.get("/usergallery", withAuth, async (req, res) => {
   try {
     const userGalleryData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
@@ -46,7 +46,7 @@ router.get("/usergallery/:id", withAuth, async (req, res) => {
     });
     const userGallery = userGalleryData.get({ plain: true });
 
-    res.render("user-gallery", {
+    res.render("userGallery", {
       ...userGallery,
       logged_in: true,
     });
