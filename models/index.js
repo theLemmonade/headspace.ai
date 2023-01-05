@@ -1,4 +1,24 @@
 const User = require('./User');
-const Gallery = require('./Gallery');
+const UserGallery = require('./UserGallery');
+const Image = require('./Image');
 
-module.exports = { User, Gallery };
+User.hasOne(UserGallery, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE',
+
+});
+UserGallery.belongsTo(User, {
+    foreignKey: 'user_id',
+});
+
+UserGallery.hasMany(Image, {
+    foreignKey: 'gallery_id',
+    onDelete: 'CASCADE'
+});
+Image.belongsTo(UserGallery, {
+    foreignKey: 'gallery_id'
+});
+
+
+
+module.exports = { User, UserGallery, Image };
