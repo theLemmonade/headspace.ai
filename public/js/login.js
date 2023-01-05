@@ -42,7 +42,9 @@ function login() {
 	// TODO login logic
 }
 
+// Choose default:
 showReg();
+//showLog();
 
 regNav.addEventListener("click", showReg);
 toReg.addEventListener("click", showReg);
