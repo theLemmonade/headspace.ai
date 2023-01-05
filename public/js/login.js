@@ -43,8 +43,8 @@ function login() {
 }
 
 // Choose default:
-showReg();
-//showLog();
+//showReg();
+showLog();
 
 regNav.addEventListener("click", showReg);
 toReg.addEventListener("click", showReg);
