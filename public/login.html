@@ -68,49 +68,106 @@
 				</div>
 			</container>
 		</nav>
-		<section
-			id="loginEl"
-			class=""
-			style="font-family: 'Kanit', sans-serif; font-weight: 400"
-		>
-			<div class="card mx-auto">
-				<div class="card-header">headspace.ai</div>
-				<div class="card-body">
-					<h5 class="card-title">Login</h5>
-					<form>
-						<div class="form-group">
-							<label for="emailUser">Email address</label>
-							<input
-								type="email"
-								class="form-control"
-								id="emailUser"
-								aria-describedby="emailHelp"
-								placeholder="Enter email"
-							/>
-							<small id="emailHelp" class="form-text text-muted"
-								>Want to sign up? <a href="">Register here instead.</a></small
+		<div id="loginCard">
+			<!-- Important ID's of input fields for front end logic:
+					regUser
+					regEmail
+					regPass
+					regBtn
+					logUser
+					logPass
+					logBtn
+				 -->
+			<div class="card mx-5">
+				<div class="card-header">
+					<ul class="nav nav-tabs card-header-tabs">
+						<li class="nav-item">
+							<a id="regNav" class="nav-link active" aria-current="true" href="#"
+								>Register</a
 							>
+						</li>
+						<li class="nav-item mx-2">
+							<button id="logNav" class="nav-link" style="color: rgb(90, 90, 90)" href="#">
+								Login
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="card-body">
+					<div id="regEl">
+						<label for="regUser" class="form-label"
+							>Username</label
+						>
+						<input class="form-control" id="regUser" />
+						<div class="form-text">
+							Already have an account?
+							<button
+								class="toLogin"
+								style="border: none; background: none; color: blue">
+								Sign in here.
+							</button>
 						</div>
-						<div class="form-group">
-							<label for="passwordUser">Password</label>
-							<input
-								type="password"
-								class="form-control"
-								id="passwordUser"
-								placeholder="Password"
-							/>
+						<label for="regEmail" class="form-label"
+							>Email address</label
+						>
+						<input
+							id="regEmail"
+							type="email"
+							class="form-control mb-3"
+							placeholder="name@example.com"
+						/>
+						<div class="row align-items-center">
+							<div class="col-lg-6">
+								<input
+									id="regPass"
+									type="password"
+									class="form-control"
+									aria-describedby="passwordHelpInline"
+									placeholder="password"
+								/>
+							</div>
+							<div class="col-lg-6">
+								<span id="passwordHelpInline" class="form-text"
+									>Must be 8-20 characters long.</span
+								>
+							</div>
 						</div>
 						<button
+							id="regBtn"
 							type="submit"
-							class="btn btn-warning"
-							style="margin-top: 15px; width: 200px"
+							class="btn btn-warning my-3"
+							style="min-width: 150px"
 						>
-							Login
+							Register
 						</button>
-					</form>
+					</div>
+					<div id="loginEl">
+						<label for="loginUser" class="form-label"
+						>Username</label>
+						<input class="form-control" id="loginUser" />
+						<div class="form-text">
+							Don't have an account yet?
+							<button
+								class="toReg"
+								style="border: none; background: none; color: blue">
+								Register here.
+							</button>
+						</div>
+						<label for="loginPass" class="form-label"
+						>Password</label>
+						<input class="form-control" id="loginPass" />
+						<button
+						id="loginBtn"
+						type="submit"
+						class="btn btn-warning my-3"
+						style="min-width: 150px"
+					>
+						Login
+					</button>
+					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 		<footer class="fixed-bottom"></footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="./assets/js/script.js"></script>

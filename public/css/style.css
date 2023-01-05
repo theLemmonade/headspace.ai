@@ -82,11 +82,14 @@ input {
 	font-weight: 400;
 }
 
-#loginEl {
-	width: 500px;
-	margin: auto;
+#loginCard {
 	margin-top: 100px;
 	color: black;
+	max-width: 1000px;
+}
+
+.form-control {
+	max-width: 420px;
 }
 
 #galleryEl {
