@@ -49,17 +49,32 @@
 								Create</a>
 						</div>
 						<div class="nav-item">
-							<a class="nav-link" href="/gallery"><i class="bi bi-grid-fill"></i>
+							<a class="nav-link" href="/gallery"><i
+									class="bi bi-grid-fill"
+								></i>
 								Feed</a>
 						</div>
 						<div class="nav-item">
-							<a class="nav-link" href="/userGallery"><i class="bi bi-person-circle"></i>
+							<a class="nav-link" href="/userGallery"><i
+									class="bi bi-person-circle"
+								></i>
 								My Gallery</a>
 						</div>
-						<div class="nav-item">
-							<a class="nav-link" href="/login"><i class="bi bi-box-arrow-right"></i>
-								Login</a>
-						</div>
+						{{#if logged_in}}
+							<div class="nav-item">
+								<a class="nav-link" href="/logout"><i
+										class="bi bi-box-arrow-right"
+									></i>
+									Logout</a>
+							</div>
+						{{else}}
+							<div class="nav-item">
+								<a class="nav-link" href="/login"><i
+										class="bi bi-box-arrow-left"
+									></i>
+									Login</a>
+							</div>
+						{{/if}}
 					</div>
 				</div>
 			</container>
