@@ -1,42 +1,94 @@
-<section
-	id="loginEl"
-	class=""
-	style="font-family: 'Kanit', sans-serif; font-weight: 400"
->
-	<div class="card mx-auto">
-		<div class="card-header">headspace.ai</div>
+<div id="loginCard">
+	<!-- Important ID's of input fields for front end logic:
+					regUser
+					regEmail
+					regPass
+					regBtn
+					logUser
+					logPass
+					logBtn
+				 -->
+	<div class="card mx-3">
+		<div class="card-header">
+			<ul class="nav nav-tabs card-header-tabs">
+				<li class="nav-item">
+					<button
+						id="regNav"
+						class="nav-link active"
+						style="color: rgb(90, 90, 90)"
+						aria-current="true"
+					>Register</button>
+				</li>
+				<li class="nav-item mx-2">
+					<button id="logNav" class="nav-link" style="color: rgb(90, 90, 90)">
+						Login
+					</button>
+				</li>
+			</ul>
+		</div>
 		<div class="card-body">
-			<h5 class="card-title">Login</h5>
-			<form>
-				<div class="form-group">
-					<label for="emailUser">Email address</label>
-					<input
-						type="email"
-						class="form-control"
-						id="emailUser"
-						aria-describedby="emailHelp"
-						placeholder="Enter email"
-					/>
-					<small id="emailHelp" class="form-text text-muted">Want to sign up?
-						<a href="">Register here instead.</a></small>
+			<div id="regEl">
+				<label for="regUser" class="form-label">Username</label>
+				<input class="form-control" id="regUser" />
+				<div class="form-text">
+					Already have an account?
+					<button
+						id="toLog"
+						style="border: none; background: none; color: blue"
+					>
+						Sign in here.
+					</button>
 				</div>
-				<div class="form-group">
-					<label for="passwordUser">Password</label>
-					<input
-						type="password"
-						class="form-control"
-						id="passwordUser"
-						placeholder="Password"
-					/>
-				</div>
+				<label for="regEmail" class="form-label">Email Address</label>
+				<input
+					id="regEmail"
+					type="email"
+					class="form-control mb-3"
+					placeholder="name@example.com"
+				/>
+				<input
+					id="regPass"
+					type="password"
+					class="form-control"
+					aria-describedby="passwordHelpInline"
+					placeholder="password"
+				/>
+
+				<span id="passwordHelpInline" class="form-text">Must be 8-20 characters
+					long.</span>
+				<div></div>
 				<button
+					id="regBtn"
 					type="submit"
-					class="btn btn-warning"
-					style="margin-top: 15px; width: 200px"
+					class="btn btn-warning mt-3"
+					style="min-width: 150px"
+				>
+					Register
+				</button>
+			</div>
+			<div id="logEl">
+				<label for="loginUser" class="form-label">Email Address</label>
+				<input class="form-control" id="loginUser" />
+				<div class="form-text">
+					Don't have an account yet?
+					<button
+						id="toReg"
+						style="border: none; background: none; color: blue"
+					>
+						Register here.
+					</button>
+				</div>
+				<label for="loginPass" class="form-label">Password</label>
+				<input class="form-control" id="loginPass" />
+				<button
+					id="loginBtn"
+					type="submit"
+					class="btn btn-warning mt-3"
+					style="min-width: 150px"
 				>
 					Login
 				</button>
-			</form>
+			</div>
 		</div>
 	</div>
-</section>
+</div>

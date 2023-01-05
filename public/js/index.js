@@ -6,6 +6,9 @@ const resultDate = document.querySelector("#resultDate");
 const resultShareIcon = document.querySelector("#resultShareIcon");
 const resultModal = new bootstrap.Modal(document.querySelector("#resultModal"),{ keyboard: false });
 const errModal = new bootstrap.Modal(document.querySelector("#errModal"), {keyboard: false,});
+// TODO assign these to lets to using session data
+let user_name = String;
+let date_created = String;
 let imageURL = String;
 let promptValue = String;
 let isPrivate = Boolean;
@@ -80,9 +83,9 @@ function configModal() {
   resultImg.setAttribute("src", imageURL);
   resultPrompt.textContent = promptValue;
   // TODO get session data and store under 'resultUser'
-  resultUser.textContent = "current user";
+  resultUser.textContent = user_name;
   // TODO get current date and store under 'resultDate'
-  resultDate.textContent = "current date";
+  resultDate.textContent = date_created;
 }
 
 // launch Modal
@@ -117,10 +120,13 @@ function beginErrModal(error) {
 // TODO Send imageURL to SQL db
 function todb() {
   console.log("todb go");
+  // we dont need this if statement
   if (!isPrivate) {
     console.log("adding to gallery");
+    //
   } else {
     console.log("adding to Usergallery");
+    //
   }
 }
 
