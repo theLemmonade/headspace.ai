@@ -78,16 +78,24 @@
 					logPass
 					logBtn
 				 -->
-			<div class="card mx-5">
+			<div class="card mx-3">
 				<div class="card-header">
 					<ul class="nav nav-tabs card-header-tabs">
 						<li class="nav-item">
-							<a id="regNav" class="nav-link active" aria-current="true" href="#"
+							<a
+								id="regNav"
+								class="nav-link active"
+								style="color: rgb(90, 90, 90)"
+								aria-current="true"
 								>Register</a
 							>
 						</li>
 						<li class="nav-item mx-2">
-							<button id="logNav" class="nav-link" style="color: rgb(90, 90, 90)" href="#">
+							<button
+								id="logNav"
+								class="nav-link"
+								style="color: rgb(90, 90, 90)"
+							>
 								Login
 							</button>
 						</li>
@@ -95,81 +103,73 @@
 				</div>
 				<div class="card-body">
 					<div id="regEl">
-						<label for="regUser" class="form-label"
-							>Username</label
-						>
+						<label for="regUser" class="form-label">Username</label>
 						<input class="form-control" id="regUser" />
 						<div class="form-text">
 							Already have an account?
 							<button
 								id="toLog"
-								style="border: none; background: none; color: blue">
+								style="border: none; background: none; color: blue"
+							>
 								Sign in here.
 							</button>
 						</div>
-						<label for="regEmail" class="form-label"
-							>Email address</label
-						>
+						<label for="regEmail" class="form-label">Email address</label>
 						<input
 							id="regEmail"
 							type="email"
 							class="form-control mb-3"
 							placeholder="name@example.com"
 						/>
-						<div class="row align-items-center">
-							<div class="col-lg-6">
-								<input
-									id="regPass"
-									type="password"
-									class="form-control"
-									aria-describedby="passwordHelpInline"
-									placeholder="password"
-								/>
-							</div>
-							<div class="col-lg-6">
-								<span id="passwordHelpInline" class="form-text"
-									>Must be 8-20 characters long.</span
-								>
-							</div>
-						</div>
+						<input
+							id="regPass"
+							type="password"
+							class="form-control"
+							aria-describedby="passwordHelpInline"
+							placeholder="password"
+						/>
+
+						<span id="passwordHelpInline" class="form-text"
+							>Must be 8-20 characters long.</span
+						>
+						<div></div>
 						<button
 							id="regBtn"
 							type="submit"
-							class="btn btn-warning my-3"
+							class="btn btn-warning mt-3"
 							style="min-width: 150px"
 						>
 							Register
 						</button>
 					</div>
-					<div id="loginEl">
-						<label for="loginUser" class="form-label"
-						>Username</label>
+					<div id="logEl">
+						<label for="loginUser" class="form-label">Email Address</label>
 						<input class="form-control" id="loginUser" />
 						<div class="form-text">
 							Don't have an account yet?
 							<button
 								id="toReg"
-								style="border: none; background: none; color: blue">
+								style="border: none; background: none; color: blue"
+							>
 								Register here.
 							</button>
 						</div>
-						<label for="loginPass" class="form-label"
-						>Password</label>
+						<label for="loginPass" class="form-label">Password</label>
 						<input class="form-control" id="loginPass" />
 						<button
-						id="loginBtn"
-						type="submit"
-						class="btn btn-warning my-3"
-						style="min-width: 150px"
-					>
-						Login
-					</button>
+							id="loginBtn"
+							type="submit"
+							class="btn btn-warning mt-3"
+							style="min-width: 150px"
+						>
+							Login
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<footer class="fixed-bottom"></footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="./assets/js/script.js"></script>
+		<script src="./js/login.js"></script>
 	</body>
 </html>
