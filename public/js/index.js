@@ -118,16 +118,8 @@ function beginErrModal(error) {
 }
 
 // TODO Send imageURL to SQL db
-function todb() {
-  console.log("todb go");
-  // we dont need this if statement
-  if (!isPrivate) {
-    console.log("adding to gallery");
-    //
-  } else {
-    console.log("adding to Usergallery");
-    //
-  }
+async function todb() {
+
 }
 
 // For dev work on resultModal, you can uncomment the line below

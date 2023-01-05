@@ -1,6 +1,16 @@
 const router = require('express').Router();
-const { UserGallery } = require('../../models');
+const { Image } = require('../../models/Image');
 const withAuth = require('../../utils/auth');
+
+
+router.get('/', async (req, res) => {
+        const userData = await { Image }.findAll(req.params.user_name).catch((err) => {
+            res.json(err);
+        });
+        const users = userData.map((Image) => imageURL.get({ plain: true}));
+        res.render('userGallery', { users });
+    
+});
 
 // router.post('/', withAuth, async (req, res) => {
 //     try {
