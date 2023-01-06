@@ -88,3 +88,7 @@ const signupFormHandler = async (event) => {
 
 logBtn.addEventListener("click", loginFormHandler);
 regBtn.addEventListener("click", signupFormHandler);
+toReg.addEventListener("click", showReg);
+regNav.addEventListener("click", showReg);
+toLog.addEventListener("click", showLog);
+logNav.addEventListener("click", showLog);
