@@ -46,7 +46,7 @@ const loginFormHandler = async (event) => {
 
 	if (email && password) {
 		// Send a POST request to the API endpoint
-		const response = await fetch("/api/user/login", {
+		const response = await fetch("/api/users/login", {
 			method: "POST",
 			body: JSON.stringify({ email, password }),
 			headers: { "Content-Type": "application/json" },
@@ -71,7 +71,7 @@ const signupFormHandler = async (event) => {
 
 	if (user_name && email && password) {
 		// Send a POST request to the API endpoint
-		const response = await fetch("/api/user", {
+		const response = await fetch("/api/users/register", {
 			method: "POST",
 			body: JSON.stringify({ user_name, email, password }),
 			headers: { "Content-Type": "application/json" },
@@ -88,3 +88,7 @@ const signupFormHandler = async (event) => {
 
 logBtn.addEventListener("click", loginFormHandler);
 regBtn.addEventListener("click", signupFormHandler);
+toReg.addEventListener("click", showReg);
+regNav.addEventListener("click", showReg);
+toLog.addEventListener("click", showLog);
+logNav.addEventListener("click", showLog);

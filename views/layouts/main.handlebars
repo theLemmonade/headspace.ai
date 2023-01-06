@@ -62,15 +62,15 @@
 						</div>
 						{{#if logged_in}}
 							<div class="nav-item">
-								<a class="nav-link" href="/logout"><i
-										class="bi bi-box-arrow-right"
+								<a class="nav-link" href="/" id="logout"><i
+										class="bi bi-box-arrow-left"
 									></i>
 									Logout</a>
 							</div>
 						{{else}}
 							<div class="nav-item">
-								<a class="nav-link" href="/login"><i
-										class="bi bi-box-arrow-left"
+								<a class="nav-link" href="/login" id="login"><i
+										class="bi bi-box-arrow-right"
 									></i>
 									Login</a>
 							</div>
@@ -84,5 +84,6 @@
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
 		></script>
+		<script src="/js/logout.js"></script>
 	</body>
 </html>

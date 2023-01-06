@@ -4,10 +4,10 @@ const withAuth = require('../../utils/auth');
 
 
 router.get('/', async (req, res) => {
-        const userData = await { Image }.findAll(req.params.user_name).catch((err) => {
+        const userImages = await { Image }.findAll({where: {user_name: req.body.user_name}}).catch((err) => {
             res.json(err);
         });
-        const users = userData.map((Image) => imageURL.get({ plain: true}));
+        const users = userImages.map((image) => image.get({ plain: true}));
         res.render('userGallery', { users });
     
 });
