@@ -26,16 +26,21 @@ router.get("/gallery", async (req, res) => {
 
 //GET request for login
 router.get("/login", (req, res) => {
-  //If user is logged in, user will be redirected usergallery page.
+  //If user is logged in, user will be redirected homepage page.
   if (req.session.logged_in) {
-    res.redirect("/usergallery");
+    res.redirect("/");
     return;
   }
   res.render("login");
 });
 //GET request for registry
 router.get("/register", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
   res.render("register");
+  console.log(req.session);
 });
 //GET request for user gallery
 router.get("/usergallery", withAuth, async (req, res) => {

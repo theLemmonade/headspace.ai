@@ -46,7 +46,7 @@ const loginFormHandler = async (event) => {
 
 	if (email && password) {
 		// Send a POST request to the API endpoint
-		const response = await fetch("/api/user/login", {
+		const response = await fetch("/api/users/login", {
 			method: "POST",
 			body: JSON.stringify({ email, password }),
 			headers: { "Content-Type": "application/json" },
@@ -54,7 +54,7 @@ const loginFormHandler = async (event) => {
 
 		if (response.ok) {
 			// If successful, redirect the browser to the profile page
-			document.location.replace("/usergallery");
+			document.location.replace("/");
 		} else {
 			alert(response.statusText);
 		}
@@ -71,7 +71,7 @@ const signupFormHandler = async (event) => {
 
 	if (user_name && email && password) {
 		// Send a POST request to the API endpoint
-		const response = await fetch("/api/user", {
+		const response = await fetch("/api/users/register", {
 			method: "POST",
 			body: JSON.stringify({ user_name, email, password }),
 			headers: { "Content-Type": "application/json" },

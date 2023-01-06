@@ -1,11 +1,17 @@
+
 const promptInput = document.querySelector("#promptInput");
 const resultImg = document.querySelector("#resultImg");
 const resultPrompt = document.querySelector("#resultPrompt");
 const resultUser = document.querySelector("#resultUser");
 const resultDate = document.querySelector("#resultDate");
 const resultShareIcon = document.querySelector("#resultShareIcon");
-const resultModal = new bootstrap.Modal(document.querySelector("#resultModal"),{ keyboard: false });
-const errModal = new bootstrap.Modal(document.querySelector("#errModal"), {keyboard: false,});
+const resultModal = new bootstrap.Modal(
+  document.querySelector("#resultModal"),
+  { keyboard: false }
+);
+const errModal = new bootstrap.Modal(document.querySelector("#errModal"), {
+  keyboard: false,
+});
 // TODO assign these to lets to using session data
 let user_name = String;
 let date_created = String;
@@ -14,10 +20,12 @@ let promptValue = String;
 let isPrivate = Boolean;
 imageURL = "./assets/1024x1024.png";
 isPrivate = true;
-console.log("prompt.js")
+console.log("index.js");
 
 // Hide spinner
-document.querySelector("#spinner").setAttribute("class", "spinner-border text-warning d-none");
+document
+  .querySelector("#spinner")
+  .setAttribute("class", "spinner-border text-warning d-none");
 console.log("hiding spinner");
 
 function onSubmit(event) {
@@ -62,7 +70,7 @@ async function generateImageRequest() {
         .setAttribute("class", "spinner-border text-warning d-none");
       console.log("hiding spinner");
       throw new Error("405, that image could not be generated");
-    } 
+    }
     const data = await response.json();
     console.log("data, ", data);
     imageURL = data.data;
@@ -73,7 +81,6 @@ async function generateImageRequest() {
   } catch (error) {
     beginErrModal(error);
   }
-
 }
 
 // config Modal
@@ -85,7 +92,7 @@ function configModal() {
   // TODO get session data and store under 'resultUser'
   resultUser.textContent = user_name;
   // TODO get current date and store under 'resultDate'
-  resultDate.textContent = date_created;
+  // resultDate.textContent = date_created;
 }
 
 // launch Modal
@@ -118,16 +125,31 @@ function beginErrModal(error) {
 }
 
 // TODO Send imageURL to SQL db
-function todb() {
-  console.log("todb go");
-  // we dont need this if statement
-  if (!isPrivate) {
-    console.log("adding to gallery");
-    //
-  } else {
-    console.log("adding to Usergallery");
-    //
-  }
+async function todb() {
+  // user_name = req.session.user_name
+  // try {
+  //   const response = await fetch("/api/generateimage", {
+  //     method: "POST",
+  //     model: { Image },
+  //     attributes: ["prompt", "user_name", "imageURL"],
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       promptValue,
+  //       user_name,
+  //       imageURL,
+  //     }),
+  //   });
+  //   console.log(response);
+  //   if (!response.ok) {
+  //     throw new Error(
+  //       "Could not send image to personal gallery. Please try again!"
+  //     );
+  //   }
+  // } catch (err) {
+  //   console.log(err);
+  // }
 }
 
 // For dev work on resultModal, you can uncomment the line below
