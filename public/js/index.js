@@ -122,17 +122,24 @@ async function todb() {
   try {
     const response = await fetch("/api/generateimage", {
       method: "POST",
+      models: Image,
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         prompt: promptValue,
         user_name,
-        imageURL
-      })
+        imageURL,
+      }),
     });
+    console.log(body);
+    if(!response.ok) {
+      throw new Error("Could not send image to personal gallery. Please try again!")
+    }
+  } catch (err) {
+    console.log(err);
   }
-}
+};
 
 // For dev work on resultModal, you can uncomment the line below
 //resultModal.show();
