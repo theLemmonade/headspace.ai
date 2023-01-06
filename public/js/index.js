@@ -119,7 +119,19 @@ function beginErrModal(error) {
 
 // TODO Send imageURL to SQL db
 async function todb() {
-
+  try {
+    const response = await fetch("/api/generateimage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: promptValue,
+        user_name,
+        imageURL
+      })
+    });
+  }
 }
 
 // For dev work on resultModal, you can uncomment the line below
