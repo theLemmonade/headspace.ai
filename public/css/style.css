@@ -12,9 +12,9 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* max-width: 2000px; */
+	/* max-width: 2000px; 
 	margin: 0 auto !important;
-	float: none !important;
+	float: none !important; */
 	font-family: "Kanit", sans-serif;
 	color: white;
 }
