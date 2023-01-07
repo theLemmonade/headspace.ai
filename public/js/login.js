@@ -12,6 +12,7 @@ const logEmail = document.querySelector("#logEmail");
 const logPass = document.querySelector("#logPass");
 const logBtn = document.querySelector("#logBtn");
 
+
 // show the register section
 function showReg() {
 	regNav.setAttribute("class", "nav-link active");
