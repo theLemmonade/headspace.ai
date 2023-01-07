@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
     
 });
 
+
 // router.post('/', withAuth, async (req, res) => {
 //     try {
 //         const newImage = await UserGallery.create({
