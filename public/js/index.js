@@ -5,6 +5,7 @@ const resultPrompt = document.querySelector("#resultPrompt");
 const resultUser = document.querySelector("#resultUser");
 const resultDate = document.querySelector("#resultDate");
 const resultShareIcon = document.querySelector("#resultShareIcon");
+const resultDl = document.querySelector("#resultDl");
 const resultModal = new bootstrap.Modal(
   document.querySelector("#resultModal"),
   { keyboard: false }
@@ -88,6 +89,7 @@ function configModal() {
   console.log("configModal go");
   // set modal content from API response and session data
   resultImg.setAttribute("src", imageURL);
+  resultDl.setAttribute("href", imageURL)
   resultPrompt.textContent = promptValue;
   // TODO get session data and store under 'resultUser'
   resultUser.textContent = user_name;
