@@ -19,10 +19,6 @@ Image.init(
 		user_name: {
 			type: DataTypes.STRING,
 			allowNull: false,
-			references: {
-				model: "User",
-				key: "id"
-			}
 		},
 		imageURL: {
 			type: DataTypes.TEXT,
@@ -38,13 +34,13 @@ Image.init(
     		allowNull: false,
     		defaultValue: true,
 		},
-		// gallery_id: {
-		// 	type: DataTypes.INTEGER,
-		// 	references: {
-		// 		model: "usergallery",
-		// 		key: "user_id",
-		// 	},
-		// },
+		user_id: {
+			type: DataTypes.INTEGER,
+			references: {
+				model: "user",
+				key: "id",
+			},
+		},
 	},
 	{
 		sequelize,
