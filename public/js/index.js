@@ -127,7 +127,7 @@ function beginErrModal(error) {
  async function newImageHandler(){
   
   if(user_name && imageURL && promptValue) {
-      const response = await fetch('/api/usergallery', {
+      const response = await fetch('/api/user', {
           method: 'POST',
           body: JSON.stringify({ user_name, imageURL, promptValue }),
           headers: {
