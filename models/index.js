@@ -8,13 +8,13 @@ const Image = require('./Image');
 // });
 
 User.hasMany(Image, {
-    foreignKey: "user_name",
+    foreignKey: "user_id",
     onDelete: "CASCADE"
 })
 
 
 Image.belongsTo(User, {
-    foreignKey: 'user_name',
+    foreignKey: 'user_id',
 });
 
 // UserGallery.hasMany(Image, {
