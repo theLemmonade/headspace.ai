@@ -31,14 +31,14 @@ Image.init(
 		},
 		isPrivate: {
 			type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: true,
+    		allowNull: false,
+    		defaultValue: true,
 		},
-		gallery_id: {
+		user_id: {
 			type: DataTypes.INTEGER,
 			references: {
-				model: "usergallery",
-				key: "user_id",
+				model: "user",
+				key: "id",
 			},
 		},
 	},
