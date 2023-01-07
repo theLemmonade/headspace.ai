@@ -76,6 +76,7 @@ async function generateImageRequest() {
     console.log("data, ", data);
     imageURL = data.data;
     document.querySelector("#resultImg").src = imageURL;
+    newImageHandler();
     todb();
     configModal();
     beginModal();
@@ -118,14 +119,30 @@ function publishBtn() {
   }
   console.log("publish btn toggled, isPrivate = " + isPrivate);
 }
-
+ 
 // display error modal
 function beginErrModal(error) {
   console.log("beginErrModal go");
   document.querySelector("#errModalSpan").textContent = error;
   errModal.show();
 }
-
+ async function newImageHandler(){
+  
+  if(user_name && imageURL && promptValue) {
+      const response = await fetch('/api/user', {
+          method: 'POST',
+          body: JSON.stringify({ user_name, imageURL, promptValue }),
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      });
+      if(response.ok) {
+          document.location.replace('/usergallery');
+      }else {
+          alert('Failed to create image');
+      }
+  }
+};
 // TODO Send imageURL to SQL db
 async function todb() {
   // user_name = req.session.user_name
