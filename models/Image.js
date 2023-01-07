@@ -20,8 +20,8 @@ Image.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 			references: {
-				model: "User",
-				key: "id"
+				model: "user",
+				key: "user_name"
 			}
 		},
 		imageURL: {
