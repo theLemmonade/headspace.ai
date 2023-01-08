@@ -1,10 +1,13 @@
 <section id="galleryEl" class="container-fluid d-flex">
 	<div class="row">
-		<h1
-			style="font-size: 40pt; font-weight:600; text-align: center; margin-bottom: 30px"
-		>
+		<h1 style="font-size: 40pt; font-weight:600; text-align: center; margin-bottom: 30px">
 			My Gallery
 		</h1>
-		{{image}}
+		{{#each images}}
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<img id="galleryImg" src="{{imageURL}}" alt="{{prompt}}" class="card-img-top mt-3" />
+			<div class="card-body">{{user_name}}</div>
+		</div>
+		{{/each}}
 	</div>
 </section>

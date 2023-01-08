@@ -34,6 +34,10 @@ User.init(
         //   len: [8],
         // },
       },
+      // image: [{
+      //   type: DataTypes.OBJECT,
+      //   ref: 'Image'
+      // }]
     },
     {
       hooks: {
