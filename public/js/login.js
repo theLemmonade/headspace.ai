@@ -68,11 +68,11 @@ const signupFormHandler = async (event) => {
 	event.preventDefault();
 
 	// Collect values from the register form
-	const user_name = regUser.value.trim();
+	// const user_name = regUser.value.trim();
 	const email = regEmail.value.trim();
 	const password = regPass.value.trim();
 
-	if (user_name && email && password) {
+	if (email && password) {
 		// Send a POST request to the API endpoint
 		const response = await fetch("/api/users/register", {
 			method: "POST",
