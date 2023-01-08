@@ -12,13 +12,13 @@ Image.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		prompt: {
+		promptValue: {
 			type: DataTypes.STRING,
 			allowNull: false,
-		},
-		user_name: {
-			type: DataTypes.STRING,
-			allowNull: false,
+		// },
+		// user_name: {
+		// 	type: DataTypes.STRING,
+		// 	allowNull: false,
 		},
 		imageURL: {
 			type: DataTypes.TEXT,
