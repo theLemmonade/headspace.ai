@@ -81,7 +81,7 @@ const signupFormHandler = async (event) => {
 		});
 
 		if (response.ok) {
-			// If successful, redirect the browser to the profile page
+			// If successful, redirect the browser to the landing page
 			document.location.replace("/");
 		} else {
 			alert(response.statusText);
