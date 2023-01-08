@@ -28,9 +28,9 @@
 		</div>
 		<div class="card-body">
 			<div id="regEl">
-				<label for="regUser" class="form-label">Username</label>
-				<input class="form-control" id="regUser" />
-				<div class="form-text">
+				{{!-- <label for="regUser" class="form-label">Username</label>
+				<input class="form-control" id="regUser" /> --}}
+				{{!-- <div class="form-text">
 					Already have an account?
 					<button
 						id="toLog"
@@ -38,14 +38,20 @@
 					>
 						Sign in here.
 					</button>
-				</div>
+				</div> --}}
 				<label for="regEmail" class="form-label">Email Address</label>
 				<input
 					id="regEmail"
 					type="email"
-					class="form-control mb-3"
+					class="form-control"
 					placeholder="name@example.com"
 				/>
+					<div class="form-text">
+						Already have an account?
+						<button id="toLog" style="border: none; background: none; color: blue">
+						Sign in here.
+						</button>
+					</div>
 				<input
 					id="regPass"
 					type="password"

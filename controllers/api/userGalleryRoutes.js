@@ -10,7 +10,7 @@ router.get("/", withAuth, async (req, res) => {
             exclude: ["isPrivate"],
             include: []
                     },
-        order: [["date_created", "ASC"]],
+        order: [["date_created", "DSC"]],
     }).catch((err) => {
         res.json(err);
     });

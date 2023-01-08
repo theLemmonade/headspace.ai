@@ -92,8 +92,8 @@ function configModal() {
   resultDl.setAttribute("href", imageURL)
   resultPrompt.textContent = promptValue;
   // TODO get session data and store under 'resultUser'
-  resultUser.textContent = user_name;
-  console.log(user_name);
+  // resultUser.textContent = user_name;
+  // console.log(user_name);
   // TODO get current date and store under 'resultDate'
   // resultDate.textContent = date_created;
 }
