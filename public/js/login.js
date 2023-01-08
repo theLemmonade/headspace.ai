@@ -89,6 +89,7 @@ const signupFormHandler = async (event) => {
 	}
 };
 
+
 logBtn.addEventListener("click", loginFormHandler);
 regBtn.addEventListener("click", signupFormHandler);
 toReg.addEventListener("click", showReg);
