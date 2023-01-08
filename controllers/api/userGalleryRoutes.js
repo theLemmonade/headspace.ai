@@ -1,48 +1,65 @@
 const router = require('express').Router();
-const { Image } = require('../../models/Image');
+const { User, Image } = require('../../models/');
 const withAuth = require('../../utils/auth');
+const { generateImage } = require('./openai')
 
 
-router.get('/', async (req, res) => {
-        const userImages = await { Image }.findAll({where: {user_name: req.body.user_name}}).catch((err) => {
-            res.json(err);
-        });
-        const images = userImages.map((image) => image.get({ plain: true}));
-        res.render('userGallery', { images });
+router.get("/", async (req, res) => {
+    const imageData = await Image.findAll({
+        attributes: { 
+            exclude: ["isPrivate"],
+            include: []
+                    },
+        order: [["date_created", "ASC"]],
+    }).catch((err) => {
+        res.json(err);
+    });
+    const images = imageData.map((images) => images.get({ plain: true }));
 
-    
+    res.render("userGallery");
 });
 
-
-// router.post('/', withAuth, async (req, res) => {
+// router.post("/", withAuth, async (req, res) => {
 //     try {
-//         const newImage = await UserGallery.create({
-//             ...req.body,
-//             user_id: req.session.user_id,
-
-//         });
+//         const newImage = await Image.create({
+//         ...req.body,
+//         user_id: req.session.user_id,
+//     });
 //         res.status(200).json(newImage);
-//     }catch (err) {
+//     } catch (err) {
 //         res.status(400).json(err);
 //     }
 // });
 
-// router.delete('/:id', withAuth, async (req, res) => {
-//     try {
-//         const userGalleryData = await UserGallery.destroy({
-//             where: { 
-//                 id: req.params.id,
-//                 user_id: req.session.user_id,
-//             },
-//         });
 
-//         if(!userGalleryData) {
-//             res.status(404).json({ message: 'No gallery found with this id'});
-//         }
-//     res.status(404).json(userGalleryData);
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// })
+// router.get('/userGallery', (req, res) => {
+//         User.findAll({
+//             attributes: {exclude: ['password']},
+//             where: {
+//                 id: req.params.id
+//             },
+//             include: [{
+//                 model: User,
+//                 // Include image from User.js
+//                 attributes: ['id', 'user_name']
+//             },
+//             {
+//                 model: Image,
+//                 attributes: ['prompt', 'imageURL', 'user_id']
+//             }    
+//         ]
+//         })
+//             .then(dbUserData => {
+//                 if(!dbUserData) {
+//                     res.status(404).json({message: 'No user found with this id!'});
+//                     return;
+//                 }
+//                 res.json(dbUserData);
+//             })
+//             .catch(err => {
+//                 console.log(err);
+//                 res.status(500).json(err);
+//             });
+//     });
 
 module.exports = router; 

@@ -119,30 +119,31 @@ function publishBtn() {
   }
   console.log("publish btn toggled, isPrivate = " + isPrivate);
 }
- 
+
 // display error modal
 function beginErrModal(error) {
   console.log("beginErrModal go");
   document.querySelector("#errModalSpan").textContent = error;
   errModal.show();
-}
- async function newImageHandler(){
-  
-  if(user_name && imageURL && promptValue) {
+};
+
+  async function newImageHandler(){  
+  if(imageURL && promptValue) {
       const response = await fetch('/api/users', {
           method: 'POST',
-          body: JSON.stringify({ user_name, imageURL, promptValue }),
+          body: JSON.stringify({imageURL, promptValue }),
           headers: {
               'Content-Type': 'application/json',
           },
       });
       if(response.ok) {
-          document.location.replace('/usergallery');
+          document.location.replace('/userGallery');
       }else {
           alert('Failed to create image');
       }
-  }
+  };
 };
+
 // TODO Send imageURL to SQL db
 async function todb() {
   // user_name = req.session.user_name
@@ -177,4 +178,4 @@ async function todb() {
 // Listens for submit event
 document.querySelector("#submit").addEventListener("click", onSubmit);
 document.querySelector("#resultShare").addEventListener("click", publishBtn);
-document.querySelector("#resultSave").addEventListener("click", todb);
+document.querySelector("#resultSave").addEventListener("click", newImageHandler);
