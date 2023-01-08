@@ -44,6 +44,7 @@ Image.init(
 	},
 	{
 		sequelize,
+		
 		freezeTableName: true,
 		underscored: true,
 		modelName: "image",

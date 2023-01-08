@@ -7,16 +7,17 @@ const { generateImage } = require('./openai')
 router.get("/", withAuth, async (req, res) => {
     const imageData = await Image.findAll({
         attributes: { 
-            exclude: ["isPrivate"],
-            include: []
-                    },
-        order: [["date_created", "DSC"]],
+        exclude: ["isPrivate"]},
+        order: [['date_created', 'DESC']],
     }).catch((err) => {
         res.json(err);
     });
     const images = imageData.map((images) => images.get({ plain: true }));
 
-    res.render("userGallery");
+    res.render("userGallery", {
+        ...req.body,
+        user_id: req.session.user_id,
+    });
 });
 
 router.post("/", withAuth, async (req, res) => {
