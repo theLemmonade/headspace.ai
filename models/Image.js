@@ -12,7 +12,7 @@ Image.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		prompt: {
+		promptValue: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},

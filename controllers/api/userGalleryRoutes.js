@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 const { generateImage } = require('./openai')
 
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
     const imageData = await Image.findAll({
         attributes: { 
             exclude: ["isPrivate"],
@@ -19,17 +19,17 @@ router.get("/", async (req, res) => {
     res.render("userGallery");
 });
 
-// router.post("/", withAuth, async (req, res) => {
-//     try {
-//         const newImage = await Image.create({
-//         ...req.body,
-//         user_id: req.session.user_id,
-//     });
-//         res.status(200).json(newImage);
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
+router.post("/", withAuth, async (req, res) => {
+    try {
+        const newImage = await Image.create({
+        ...req.body,
+        user_id: req.session.user_id,
+    });
+        res.status(200).json(newImage);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
 
 
 // router.get('/userGallery', (req, res) => {

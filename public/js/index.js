@@ -76,8 +76,7 @@ async function generateImageRequest() {
     console.log("data, ", data);
     imageURL = data.data;
     document.querySelector("#resultImg").src = imageURL;
-    newImageHandler();
-    todb();
+  
     configModal();
     beginModal();
   } catch (error) {
@@ -94,6 +93,7 @@ function configModal() {
   resultPrompt.textContent = promptValue;
   // TODO get session data and store under 'resultUser'
   resultUser.textContent = user_name;
+  console.log(user_name);
   // TODO get current date and store under 'resultDate'
   // resultDate.textContent = date_created;
 }
@@ -128,19 +128,21 @@ function beginErrModal(error) {
 };
 
   async function newImageHandler(){  
-  if(imageURL && promptValue) {
-      const response = await fetch('/api/users', {
+  if(imageURL && promptValue && user_name) {
+      const response = await fetch('/api/usergallery', {
           method: 'POST',
-          body: JSON.stringify({imageURL, promptValue }),
+          body: JSON.stringify({imageURL, promptValue, user_name }),
           headers: {
               'Content-Type': 'application/json',
           },
+          
       });
       if(response.ok) {
           document.location.replace('/userGallery');
       }else {
           alert('Failed to create image');
       }
+      console.log(response)
   };
 };
 
