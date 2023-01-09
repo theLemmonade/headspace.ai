@@ -110,4 +110,5 @@ Thanks to:
 <li>Class activities, especially week 14 as a reference for handlebars issues.
 <li>OpenAI for their mostly easy and mostly free to use API.
 <li>Tutors and Ask BCS for their help in troubleshooting different issues.
+<li>David Falvey @eyeballcramps for our icon 
 </ul>
