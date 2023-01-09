@@ -7,7 +7,9 @@ Submitted for evaluation.
 <br>
 <br>
 # Project Deployed
-<li>https://headspaceai.herokuapp.com/userGallery 
+https://headspaceai.herokuapp.com
+<br>
+https://github.com/theLemmonade/project-headspace.ai
 <br>
 <br>
 
@@ -41,7 +43,7 @@ Submitted for evaluation.
 
 # Technologies Used
 <ul>
-<li>Used HTML, JavaScript, CSS, SQL, Node, and Handlebars to build website.
+<li>Used HTML, JavaScript, CSS, SQL, Node, and Handlebars to build the website.
 <li>Used OpenAI API to capture and render AI generated images per user input. https://https://openai.com/api/ 
 <li>Used Heroku to deploy the website.
 </ul>
@@ -63,7 +65,7 @@ Submitted for evaluation.
 
 # Usage
 Users can enter a prompt and the API will generate an AI image based on the users text input.
-Users can choose to save the generated image to a personal gallery page.
+Users can choose to save the generated image to a personal gallery page.  Users can view recently created AI images on the "Feed" page.
 <br>
 <br>
 
@@ -88,9 +90,9 @@ Users can choose to save the generated image to a personal gallery page.
 During the creation of the website the team ecountered these challenges to production:
 <ul>
 <li>File structure and routing issues, which could have been eliminated or lessened with a wireframe.
-<li>Because the API image storage was limited to one hour we needed to find another way to display a feed gallery.  With a larger-scale website with lots of users the 'live feed feature" would be easier to accomplish.
-<li>Handlebars was a technology that was a bit tricky to work with
-<li>Heroku
+<li>Because the API image storage was limited to one hour we needed to find another way to display a feed gallery.  With a larger-scale website with lots of users the 'live feed feature" would be easier to maintain.
+<li>Handlebars was a technology that was tricky to work with.
+<li>Heroku presente problems even with an application that is fully functioning locally. 
 </ul>
 <br>
 <br>
@@ -101,7 +103,7 @@ This is a responsive, interactive website using many technologies to generate an
 <ul>
 <li>Add options for the image created, including size and style options.
 <li>Add a share button for the user to easily share an image through social media or text, or copy a link to the image which would be shareable.
-<li>Add a social element in the feed page for users to  comment on or react to other users' shared images.
+<li>Add a social element in the feed page for users to comment on or react to other users' shared images.
 </ul>
 <br>
 <br>
