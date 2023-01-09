@@ -1,7 +1,79 @@
-<!-- prompt container -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+		<style> @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");</style>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>headspace.ai</title>
+	</head>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- nav el -->
+		<nav class="navbar navbar-expand-lg">
+			<container class="container-fluid" style=" margin-left: 45px;">
+				<img src="../public/assets/iconlight.png" style="height: 20px; margin-right: 5px;">
+				<a class="navbar-brand" href="#">headspace.ai</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<div class="navbar-nav">
+						<div class="nav-item">
+							<a class="nav-link" aria-current="page" href="/"><i
+									class="bi bi-brush-fill"
+								></i>
+								Create</a>
+						</div>
+						<div class="nav-item">
+							<a class="nav-link" href="/gallery"><i
+									class="bi bi-grid-fill"
+								></i>
+								Feed</a>
+						</div>
+						<div class="nav-item">
+							<a class="nav-link" href="/userGallery"><i
+									class="bi bi-person-circle"
+								></i>
+								My Gallery</a>
+						</div>
+						
+						<div class="nav-item">
+							<a class="nav-link btn-no-style" id="logout">
+								<i class="bi bi-box-arrow-left">
+								</i>
+								Logout
+							</a>
+						</div>
+						<div class="nav-item">
+							<a class="nav-link" href="/login" id="login">
+							<i class="bi bi-box-arrow-right"></i>
+									Login
+								</a>
+						</div>					</div>
+				</div>
+			</container>
+		</nav>
+
+
+		<main>
+			<!-- prompt container -->
 <div id="heroEl" class="">
 	<h1 id="hero" class="text-center">dream up anything with <span id="heroSpan">headspace.ai</span></h1>
-	<h4 class="text-center my-4" style="font-weight:400">headspace.ai is an artifical intellgence powered image generation tool. Enter any prompt to begin.</h4>
+	<h4 class="text-center my-4">headspace.ai is an artifical intellgence powered image generation tool. Enter any prompt to begin.</h4>
 	<div id="promptEl" class="">
 		<input
 			id="promptInput"
@@ -138,3 +210,7 @@
 	</div>
 </div>
 <script src="/js/index.js"></script>
+        </main>
+		<footer></footer>
+	</body>
+</html>
