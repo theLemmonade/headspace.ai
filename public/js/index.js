@@ -13,8 +13,8 @@ const errModal = new bootstrap.Modal(document.querySelector("#errModal"), {
   keyboard: false,
 });
 // TODO assign these to lets to using session data
-let user_name = String;
-let date_created = String;
+// let user_name = String;
+// let date_created = String;
 let imageURL = String;
 let promptValue = String;
 let isPrivate = Boolean;
@@ -34,7 +34,7 @@ function onSubmit(event) {
   promptValue = promptInput.value;
   console.log(promptValue);
   // If nothing is added then an alert pops up
-  if (promptValue === " ") {
+  if (promptValue === "") {
     document
       .querySelector("#promptInput")
       .setAttribute(
@@ -54,14 +54,13 @@ async function generateImageRequest() {
       .querySelector("#spinner")
       .setAttribute("class", "spinner-border text-warning");
     console.log("showing spinner");
-    const response = await fetch("/api/generateimage", 
-    {
+    const response = await fetch("/api/generateimage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        promptValue,
+        prompt: promptValue,
       }),
     });
 
