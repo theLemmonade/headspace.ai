@@ -12,11 +12,9 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* max-width: 2000px; 
-	margin: 0 auto !important;
-	float: none !important; */
 	font-family: "Kanit", sans-serif;
 	color: white;
+	text-shadow: 0px 0px 20px rgba(0, 0, 1, 0.25);
 }
 
 input {
@@ -25,13 +23,14 @@ input {
 }
 
 .navbar {
-	backdrop-filter: blur(15px);
+	background-color: rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(30px);
 	color: white;
 	font-family: "Kanit", sans-serif;
 	border: 2px solid rgba(0, 0, 0, 0.095);
 }
 
-.nav-link.active, .nav-link.hover, .nav-link.focus {
+.nav-link.active, .nav-link.hover, .nav-link.focus, a:hover {
 	color: rgb(255, 208, 0) !important;
 }
 
@@ -45,9 +44,10 @@ input {
 }
 
 #heroEl {
-	width: 90%;
+	width: 95%;
 	max-width: 1500px;
-	backdrop-filter: blur(15px);
+	background-color: rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(30px);
 	margin: auto;
 	margin-top: 10%;
 	padding: 30px;
@@ -129,7 +129,7 @@ input {
 }
 
 #galleryEl {
-	background-color: rgb(37, 42, 46);
+	backdrop-filter: blur(100px);
 	width: 95%;
 	margin: auto;
 	margin-top: 30px;
