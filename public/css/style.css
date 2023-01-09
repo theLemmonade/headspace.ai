@@ -1,7 +1,6 @@
 .header-container,
 .body-container,
 .footer-container {
-	/* max-width: 2000px; */
 	margin: 0 auto;
 }
 
@@ -134,7 +133,7 @@ input {
 	margin: auto;
 	margin-top: 30px;
 	padding: 50px;
-	border-radius: 5px;
+	border: 2px solid rgba(0, 0, 0, 0.095);
 }
 
 .card {
