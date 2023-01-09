@@ -31,7 +31,7 @@ input {
 	border: 2px solid rgba(0, 0, 0, 0.095);
 }
 
-.nav-link.active, .nav-link.hover, .nav-link.focus {
+.nav-link.active, .nav-link.hover, .nav-link.focus, a:hover {
 	color: rgb(255, 208, 0) !important;
 }
 
