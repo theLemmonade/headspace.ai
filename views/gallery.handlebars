@@ -7,10 +7,13 @@
 			Feed
 		</h1>
 		{{#each images}}
+		{{!-- {{#if date_created}} --}}
+		{{#if (shouldRender date_created)}}
 			<div class="col-lg-4 col-md-6 col-sm-12">
 				<img id="galleryImg" src="{{imageURL}}" alt="{{promptValue}}" class="card-img-top mt-3" />
 				<div class="card-body my-3" style="text-align: center;">"{{promptValue}}"</div>
 			</div>
+			{{/if}}
 		{{/each}}
 	</div>
 </section>

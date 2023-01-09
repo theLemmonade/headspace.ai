@@ -33,34 +33,5 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 
-// router.get('/userGallery', (req, res) => {
-//         User.findAll({
-//             attributes: {exclude: ['password']},
-//             where: {
-//                 id: req.params.id
-//             },
-//             include: [{
-//                 model: User,
-//                 // Include image from User.js
-//                 attributes: ['id', 'user_name']
-//             },
-//             {
-//                 model: Image,
-//                 attributes: ['prompt', 'imageURL', 'user_id']
-//             }    
-//         ]
-//         })
-//             .then(dbUserData => {
-//                 if(!dbUserData) {
-//                     res.status(404).json({message: 'No user found with this id!'});
-//                     return;
-//                 }
-//                 res.json(dbUserData);
-//             })
-//             .catch(err => {
-//                 console.log(err);
-//                 res.status(500).json(err);
-//             });
-//     });
 
 module.exports = router; 
