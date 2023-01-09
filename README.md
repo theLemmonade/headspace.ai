@@ -78,8 +78,6 @@ Users can choose to save the generated image to a personal gallery page.
 <li>THEN I can see that image in the “My Gallery” page accessed from the nav bar.
 <li>WHEN I click into the “Feed” page from the nav bar,
 <li>THEN I will see AI images created recently by me and other users.
-<li>WHEN I click into the Gallery tab 
-<li>THEN I will see AI images created recently by me and other users.
 <li>WHEN I click the logout button 
 <li>THEN I will be redirected to the homepage.
 </ul>
