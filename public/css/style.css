@@ -129,6 +129,7 @@ input {
 }
 
 #galleryEl {
+	background-color: rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(100px);
 	width: 95%;
 	margin: auto;
