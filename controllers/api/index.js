@@ -10,14 +10,5 @@ router.use('/usergallery', userGalleryRoutes);
 
 
 
-// const {
-//     getAllUser
-// } = require('../api/userRoutes')
-
-// router
-//     .route('/')
-//     .get(getAllUser)
-//     .post()
-
 
 module.exports = router; 
