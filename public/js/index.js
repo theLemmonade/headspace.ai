@@ -137,3 +137,10 @@ function todb() {
 document.querySelector("#submit").addEventListener("click", onSubmit);
 document.querySelector("#resultShare").addEventListener("click", publishBtn);
 document.querySelector("#resultSave").addEventListener("click", todb);
+
+// Listens for enter keydown
+document.querySelector("#submit").addEventListener("keypress", function(event){
+  if (event.key === "Enter") {
+    document.querySelector("#submit").click();
+  }
+});
