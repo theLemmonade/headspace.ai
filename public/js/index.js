@@ -26,7 +26,7 @@ function onSubmit(event) {
   promptValue = promptInput.value;
   console.log(promptValue);
   // If nothing is added then an alert pops up
-  if (!promptValue === "") {
+  if (promptValue === "") {
     document
       .querySelector("#promptInput")
       .setAttribute(

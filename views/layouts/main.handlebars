@@ -59,7 +59,6 @@
 								Logout
 							</a>
 						</div>
-						{{!-- <script src="/js/logout.js"></script> --}}
 						{{else}}
 						<div class="nav-item">
 							<a class="nav-link" href="/login" id="login">
@@ -72,15 +71,10 @@
 				</div>
 			</container>
 		</nav>
-
-
 		<main>
 			{{{body}}}
 		</main>
-
 		<footer></footer>
-
-
 		{{#if logged_in}}
 		<script src="/js/logout.js"></script>
 		{{/if}}
