@@ -15,10 +15,10 @@ User.init(
         primaryKey: true,
         autoIncrement: true,
       },
-      user_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      // user_name: {
+      //   type: DataTypes.STRING,
+      //   allowNull: false,
+      // },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -30,10 +30,14 @@ User.init(
       password: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          len: [8],
-        },
+        // validate: {
+        //   len: [8],
+        // },
       },
+      // image: [{
+      //   type: DataTypes.OBJECT,
+      //   ref: 'Image'
+      // }]
     },
     {
       hooks: {

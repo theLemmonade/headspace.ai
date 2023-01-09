@@ -1,3 +1,5 @@
+// const { json } = require("sequelize/types");
+
 const regNav = document.querySelector("#regNav");
 const regEl = document.querySelector("#regEl");
 const toReg = document.querySelector("#toReg");
@@ -11,6 +13,7 @@ const toLog = document.querySelector("#toLog");
 const logEmail = document.querySelector("#logEmail");
 const logPass = document.querySelector("#logPass");
 const logBtn = document.querySelector("#logBtn");
+
 
 // show the register section
 function showReg() {
@@ -46,34 +49,9 @@ const loginFormHandler = async (event) => {
 
 	if (email && password) {
 		// Send a POST request to the API endpoint
-		const response = await fetch("/api/user/login", {
+		const response = await fetch("/api/users/login", {
 			method: "POST",
 			body: JSON.stringify({ email, password }),
-			headers: { "Content-Type": "application/json" },
-		});
-
-		if (response.ok) {
-			// If successful, redirect the browser to the profile page
-			document.location.replace("/usergallery");
-		} else {
-			alert(response.statusText);
-		}
-	}
-};
-
-const signupFormHandler = async (event) => {
-	event.preventDefault();
-
-	// Collect values from the register form
-	const user_name = regUser.value.trim();
-	const email = regEmail.value.trim();
-	const password = regPass.value.trim();
-
-	if (user_name && email && password) {
-		// Send a POST request to the API endpoint
-		const response = await fetch("/api/user", {
-			method: "POST",
-			body: JSON.stringify({ user_name, email, password }),
 			headers: { "Content-Type": "application/json" },
 		});
 
@@ -86,5 +64,35 @@ const signupFormHandler = async (event) => {
 	}
 };
 
+const signupFormHandler = async (event) => {
+	event.preventDefault();
+
+	// Collect values from the register form
+	// const user_name = regUser.value.trim();
+	const email = regEmail.value.trim();
+	const password = regPass.value.trim();
+
+	if (email && password) {
+		// Send a POST request to the API endpoint
+		const response = await fetch("/api/users/register", {
+			method: "POST",
+			body: JSON.stringify({ email, password }),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		if (response.ok) {
+			// If successful, redirect the browser to the landing page
+			document.location.replace("/");
+		} else {
+			alert(response.statusText);
+		}
+	}
+};
+
+
 logBtn.addEventListener("click", loginFormHandler);
 regBtn.addEventListener("click", signupFormHandler);
+toReg.addEventListener("click", showReg);
+regNav.addEventListener("click", showReg);
+toLog.addEventListener("click", showLog);
+logNav.addEventListener("click", showLog);
