@@ -87,7 +87,7 @@ Users can choose to save the generated image to a personal gallery page.  Users 
 <br>
 
 # Challenges
-During the creation of the website the team ecountered these challenges to production:
+During the creation of the website the team encountered these challenges to production:
 <ul>
 <li>File structure and routing issues, which could have been eliminated or lessened with a wireframe.
 <li>Because the API image storage was limited to one hour we needed to find another way to display a feed gallery.  With a larger-scale website with lots of users the 'live feed feature" would be easier to maintain.
