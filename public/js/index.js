@@ -61,7 +61,7 @@ async function generateImageRequest() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        prompt: promptValue,
+        promptValue,
       }),
     });
 
