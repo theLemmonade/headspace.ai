@@ -14,7 +14,6 @@ let promptValue = String;
 let isPrivate = Boolean;
 imageURL = "./assets/1024x1024.png";
 isPrivate = true;
-console.log("prompt.js")
 
 // Hide spinner
 document.querySelector("#spinner").setAttribute("class", "spinner-border text-warning d-none");
@@ -24,7 +23,7 @@ function onSubmit(event) {
   event.preventDefault();
   console.log("onSubmit go");
   promptValue = promptInput.value;
-  console.log(promptValue);
+  console.log("prompt is" + promptValue);
   // If nothing is added then an alert pops up
   if (promptValue === "") {
     document
@@ -82,9 +81,6 @@ function configModal() {
   // set modal content from API response and session data
   resultImg.setAttribute("src", imageURL);
   resultPrompt.textContent = promptValue;
-  // TODO get session data and store under 'resultUser'
-  resultUser.textContent = user_name;
-  // TODO get current date and store under 'resultDate'
   resultDate.textContent = date_created;
 }
 
