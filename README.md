@@ -25,8 +25,6 @@ https://github.com/theLemmonade/project-headspace.ai
 
   * [Technologies Used](#technologies-used)
 
-  * [Installation](#installation)
-
   * [Usage](#usage)
   
   * [User Story](#user-story)
@@ -46,19 +44,6 @@ https://github.com/theLemmonade/project-headspace.ai
 <li>Used HTML, JavaScript, CSS, SQL, Node, and Handlebars to build the website.
 <li>Used OpenAI API to capture and render AI generated images per user input. https://https://openai.com/api/ 
 <li>Used Heroku to deploy the website.
-</ul>
-<br>
-<br>
-
-# Installation
-<ul>
-<li>Run npm install
-<li>create .env file with DB_NAME='user_db', 'DB_USER='root', DB_PASSWORD='(your SQL password)'
-<li>Run SQL installation "mysql -u root -p", then enter SQL password from env file when prompted
-<li>Run "source db/schema.sql", then "quit" to quit SQL
-<li>Run seed command "npm run seed"
-<li>Run the start command "npm start"
-<li>Open http://localhost:3001
 </ul>
 <br>
 <br>
