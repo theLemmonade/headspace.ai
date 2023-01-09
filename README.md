@@ -41,7 +41,7 @@ https://github.com/theLemmonade/project-headspace.ai
 
 # Technologies Used
 <ul>
-<li>Used HTML, JavaScript, CSS, SQL, Node, and Handlebars to build the website.
+<li>Used HTML, JavaScript, CSS, SQL, Node, Experess, and Handlebars to build the website.
 <li>Used OpenAI API to capture and render DALL-E 2 generated images per user input. https://https://openai.com/api/ 
 <li>Used Heroku to deploy the website.
 </ul>
