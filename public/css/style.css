@@ -45,8 +45,8 @@ input {
 }
 
 #heroEl {
-	width: 80%;
-	backdrop-filter: blur(10px);
+	width: 90%;
+	backdrop-filter: blur(15px);
 	margin: auto;
 	margin-top: 10%;
 	padding: 30px;
