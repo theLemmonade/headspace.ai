@@ -1,4 +1,3 @@
-
 const promptInput = document.querySelector("#promptInput");
 const resultImg = document.querySelector("#resultImg");
 const resultPrompt = document.querySelector("#resultPrompt");
@@ -55,7 +54,8 @@ async function generateImageRequest() {
       .querySelector("#spinner")
       .setAttribute("class", "spinner-border text-warning");
     console.log("showing spinner");
-    const response = await fetch("/api/generateimage", {
+    const response = await fetch("/api/generateimage", 
+    {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ async function generateImageRequest() {
     console.log("data, ", data);
     imageURL = data.data;
     document.querySelector("#resultImg").src = imageURL;
-  
+
     configModal();
     beginModal();
   } catch (error) {
@@ -89,7 +89,7 @@ function configModal() {
   console.log("configModal go");
   // set modal content from API response and session data
   resultImg.setAttribute("src", imageURL);
-  resultDl.setAttribute("href", imageURL)
+  resultDl.setAttribute("href", imageURL);
   resultPrompt.textContent = promptValue;
   // TODO get session data and store under 'resultUser'
   // resultUser.textContent = user_name;
@@ -125,26 +125,25 @@ function beginErrModal(error) {
   console.log("beginErrModal go");
   document.querySelector("#errModalSpan").textContent = error;
   errModal.show();
-};
+}
 
-  async function newImageHandler(){  
-  if(imageURL && promptValue && user_name) {
-      const response = await fetch('/api/usergallery', {
-          method: 'POST',
-          body: JSON.stringify({imageURL, promptValue, user_name }),
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          
-      });
-      if(response.ok) {
-          document.location.replace('/userGallery');
-      }else {
-          alert('Failed to create image');
-      }
-      console.log(response)
-  };
-};
+async function newImageHandler() {
+  if (imageURL && promptValue) {
+    const response = await fetch("/api/usergallery", {
+      method: "POST",
+      body: JSON.stringify({ imageURL, promptValue }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      document.location.replace("/userGallery");
+    } else {
+      alert("Failed to create image");
+    }
+    console.log(response);
+  }
+}
 
 // TODO Send imageURL to SQL db
 async function todb() {
@@ -180,4 +179,6 @@ async function todb() {
 // Listens for submit event
 document.querySelector("#submit").addEventListener("click", onSubmit);
 document.querySelector("#resultShare").addEventListener("click", publishBtn);
-document.querySelector("#resultSave").addEventListener("click", newImageHandler);
+document
+  .querySelector("#resultSave")
+  .addEventListener("click", newImageHandler);
