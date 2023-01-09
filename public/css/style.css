@@ -1,7 +1,6 @@
 .header-container,
 .body-container,
 .footer-container {
-	/* max-width: 2000px; */
 	margin: 0 auto;
 }
 
@@ -60,10 +59,19 @@ input {
 	font-size: 40pt;
 	font-family: "Kanit", sans-serif;
 	font-weight: 400;
+	color: #ffe13e
 }
 
 #heroSpan {
 	font-weight: 700;
+	color: white;
+}
+
+#heroIcon {
+	display:inline-block;
+	height: 55px;
+	margin: 0px 7px 0px 0px;
+	transform:translateY(-5px);
 }
 
 #promptEl {
@@ -135,7 +143,7 @@ input {
 	margin: auto;
 	margin-top: 30px;
 	padding: 50px;
-	border-radius: 5px;
+	border: 2px solid rgba(0, 0, 0, 0.095);
 }
 
 .card {
