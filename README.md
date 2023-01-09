@@ -12,9 +12,9 @@ Submitted for evaluation.
 <br>
 
 # Screenshots of Webpage
-<img src="" alt="Website Screenshot1">
-<img src="" alt="Website Screenshot2">
-<img src="" alt="Website Screenshot3">
+<img src="public/assets/headspacemainpagescreenshot.png" alt="Website Screenshot1">
+<img src="public/assets/headspaceloginscreenshot.png" alt="Website Screenshot2">
+<img src="public/assets/headspacecreatedimagescreenshot.png" alt="Website Screenshot3">
 <br>
 <br>
 <br>
