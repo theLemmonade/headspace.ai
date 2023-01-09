@@ -2,25 +2,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-			rel="stylesheet"
-		/>
-		<style>
-			@import
-			url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-		</style>
-		
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+		<style> @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");</style>
 		<link rel="stylesheet" href="/css/reset.css" />
 		<link rel="stylesheet" href="/css/style.css" />
 		<title>headspace.ai</title>
@@ -29,8 +16,9 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- nav el -->
 		<nav class="navbar navbar-expand-lg">
-			<container class="container-fluid" style="max-width: 1600px">
-				<a class="navbar-brand" href="#">headspace.ai</a>
+			<container class="container-fluid">
+				<img src="/assets/iconlight.png" style="height: 20px; margin-right: 5px;">
+				<a class="navbar-brand" href="/">headspace.ai</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -45,7 +33,7 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<div class="navbar-nav">
 						<div class="nav-item">
-							<a class="nav-link active" aria-current="page" href="/"><i
+							<a class="nav-link" aria-current="page" href="/"><i
 									class="bi bi-brush-fill"
 								></i>
 								Create</a>
@@ -71,7 +59,6 @@
 								Logout
 							</a>
 						</div>
-						{{!-- <script src="/js/logout.js"></script> --}}
 						{{else}}
 						<div class="nav-item">
 							<a class="nav-link" href="/login" id="login">
@@ -84,15 +71,10 @@
 				</div>
 			</container>
 		</nav>
-
-
 		<main>
 			{{{body}}}
 		</main>
-
 		<footer></footer>
-
-
 		{{#if logged_in}}
 		<script src="/js/logout.js"></script>
 		{{/if}}

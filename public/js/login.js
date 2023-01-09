@@ -1,5 +1,3 @@
-// const { json } = require("sequelize/types");
-
 const regNav = document.querySelector("#regNav");
 const regEl = document.querySelector("#regEl");
 const toReg = document.querySelector("#toReg");
@@ -88,7 +86,6 @@ const signupFormHandler = async (event) => {
 		}
 	}
 };
-
 
 logBtn.addEventListener("click", loginFormHandler);
 regBtn.addEventListener("click", signupFormHandler);
